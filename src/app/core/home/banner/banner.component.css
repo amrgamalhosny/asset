@@ -1,0 +1,120 @@
+/* Banner */
+.banner{
+    /* background-image: url('../../../../assets/images/world.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; */
+    color:#fff;
+}
+.banner video{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+}
+/* Navbar */
+.navbar{
+    padding: 30px 100px;
+}
+.menuBar img{
+    margin-right: 20px;
+}
+/* Search */
+.searchCont{
+   text-align: center;
+   padding: 110px 10px;
+}
+.searchTitle{
+    font-size: 60px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+.searchTitle span{
+    font-weight: 700;
+}
+.searchCont small{
+    margin-bottom: 15px;
+    display: block;
+    font-size: 15px;
+}
+.searchCont .bannerSearch{
+    background-color: transparent;
+    border: 2px solid #fff;
+    width:60%;
+    height: 50px;
+    padding: 0 10px;
+    color: #fff;
+    outline: 0;
+}
+.searchCont ::placeholder {
+    color: #fff;
+    opacity: 1; /* Firefox */
+  }
+  
+  .searchCont :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #fff;
+  }
+  
+  .searchCont ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #fff;
+  }
+  .bannerIcon{
+    position: absolute;
+    right: 22%;
+    top: 4%;
+    background: transparent;
+    border: none;
+    border-left: 2px solid #fff;
+    height: 48px;
+    padding-left: 18px;
+  }
+  .bannerIcon :focus{
+      outline: 0;
+  }
+/* Customers */
+.customerSection{
+    padding: 0px 100px;
+}
+.customerSection h2{
+    margin-bottom: 15px;
+}
+.customerSection .card{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4);
+    min-height: 190px;
+}
+.customerSection .card img{
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+/* Search Results */
+.results{
+    background-color: #fff;
+    text-align: left;
+    padding: 30px;
+    position: absolute;
+    top: 49%;
+    width: 73%;
+    z-index: 10;
+}
+.results .title{
+    color: #0F0F0F;
+    font-size: 24px;
+    font-weight: 700;
+}
+.results .text{
+    color: #4A4A4A;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.results .text p{
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+.results .text img{
+    width: 4%;
+}
