@@ -6,9 +6,10 @@ import { BannerComponent } from './home/banner/banner.component';
 import { FormsModule } from '@angular/forms';
 import { BannerSearchPipe } from '../shared/pipes/banner-search.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './home/navbar/navbar.component';
 
 @NgModule({
-  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe],
+  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, NavbarComponent],
   imports: [
     CommonModule,
     FormsModule,

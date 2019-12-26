@@ -22,7 +22,8 @@
 /* Search */
 .searchCont{
    text-align: center;
-   padding: 110px 10px;
+   padding: 50px 10px;
+   height: 280px;
 }
 .searchTitle{
     font-size: 60px;
@@ -45,6 +46,7 @@
     padding: 0 10px;
     color: #fff;
     outline: 0;
+    z-index: 6;
 }
 .searchCont ::placeholder {
     color: #fff;
@@ -94,9 +96,13 @@
     text-align: left;
     padding: 30px;
     position: absolute;
-    top: 49%;
-    width: 73%;
-    z-index: 10;
+    top: 272px;
+    width: 800px;
+    z-index: 5;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transition: ease .5s;
 }
 .results .title{
     color: #0F0F0F;
@@ -118,3 +124,65 @@
 .results .text img{
     width: 4%;
 }
+.lgNone{
+    display: none;
+}
+/* Media Query */
+@media only screen and (min-width: 1600px) {
+    .searchCont {
+    height: 370px;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .banner{
+        background-image: url('../../../../assets/images/world.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner video{
+        display: none;
+    }
+    .customerSection {
+        padding: 60px 100px;
+    }
+    .smNone{
+        display: none;
+    }
+    .searchTitle{
+        font-size: 25px;
+    }
+    .results{
+        top: 258px;
+        width: 85%;
+    }
+    
+  }
+  @media only screen and (max-width: 500px) {
+      .searchCont{
+          width: 100%;
+      }
+      .bannerIcon{
+        right: 24%;
+      }
+      .results .text img{
+        width: 30px;
+    }
+      .results .title{
+          font-size: 16px;
+      }
+      .results .text{
+        font-size: 13px;
+    }
+    .customerSection{
+        padding-top: 0px;
+    }
+    .customerSection .card{
+        font-size: 12px;
+    }
+    .customerSection .card img{
+        width: 90%;
+    }
+    .customerSection .card-body{
+        padding:10px;
+    }
+  }

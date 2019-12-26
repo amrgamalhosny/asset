@@ -6,19 +6,74 @@
     <!-- Nav Bar -->
     <div class="container-fluid navbar">
         <div class="row w-100">
-            <div class="col-6 menuBar">
-                <img src="../../../../assets/images/menu.svg">
-                <span>ASSET</span>
-            </div>
-            <div class="col-6">
-
-            </div>
         </div>
     </div>
     <!-- End Nav Bar -->
 
     <!-- Search -->
-    <div class="container searchCont">
+    <div class="container searchCont smNone">
+        <div class="row">
+            <div class="col-12">
+                <p class="searchTitle" [@focusInOut]="isFocus ? 'textOn' : 'textOut'">
+                    <span>Explore</span> the EOH World
+                </p>
+                <small>
+                    Search by Industry, Customer, Service, Solution...
+                </small>
+            </div>
+            <div class="col-12">
+                <input [@focusInOut]="isFocus ? 'focusOn' : 'focusOut'" type="search" class="bannerSearch"
+                    placeholder="Search..." [(ngModel)]="query" name="search" (focus)="showResultsFn()"
+                    (focusout)="hideResultsFn()">
+                <button class="bannerIcon" [@focusInOut]="isFocus ? 'btnOn' : 'btnOut'">
+                    <img src="../../../../assets/images/search.svg">
+                </button>
+            </div>
+            <!-- Data From Search -->
+            <div class=" results shadow" [@resultsInOut]="showResults ? 'resultsOn' : 'resultsOut'">
+                <div class="col-12">
+                    <div class="title" [hidden]="(testOne | bannerSearch:query).length === 0">
+                        <p>Opportunities</p>
+                    </div>
+                    <div class="text" *ngFor="let t1 of testOne  | slice:0:3  | bannerSearch:query; let i=index">
+                        <img src="../../../../assets/images/22.svg">
+                        <p>{{t1.title}}</p>
+                    </div>
+                </div>
+                <!-- End Row -->
+                <div class="col-12">
+                    <div class="title" [hidden]="(testTwo | bannerSearch:query).length === 0">
+                        <p>Services</p>
+                    </div>
+                    <div class="text" *ngFor="let t2 of testTwo  | slice:0:3 | bannerSearch:query; let i=index">
+                        <img src="../../../../assets/images/22.svg">
+                        <p>{{t2.title}}</p>
+                    </div>
+                </div>
+                <!-- End Row -->
+                <div class="col-12">
+                    <div class="title" [hidden]="(testThree | bannerSearch:query).length === 0">
+                        <p>Customers</p>
+                    </div>
+                    <div class="text" *ngFor="let t3 of testThree  | slice:0:3 | bannerSearch:query; let i=index ">
+                        <img src="../../../../assets/images/22.svg">
+                        <p>{{t3.title}}</p>
+                    </div>
+                </div>
+                <!-- End Row -->
+                <div class="title"
+                    [hidden]="!((testOne | bannerSearch:query).length === 0 && (testTwo | bannerSearch:query).length === 0 && (testThree | bannerSearch:query).length === 0)">
+                    No Data Found.
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- End Data From Search -->
+        </div>
+    </div>
+    <!-- End Search -->
+
+    <!-- Responsive Search -->
+    <div class="container searchCont lgNone">
         <div class="row">
             <div class="col-12">
                 <p class="searchTitle">
@@ -29,20 +84,21 @@
                 </small>
             </div>
             <div class="col-12">
-                <input [@focusInOut]="isFocus ? 'focusOn' : 'focusOut'" type="search" class="bannerSearch" placeholder="Search..."
-                [(ngModel)]="query" name="search" (focus)="showResultsFn()" (focusout)="hideResultsFn()">
+                <input  class="bannerSearch"
+                    placeholder="Search..." [(ngModel)]="query" name="search" (focus)="showResultsFn()"
+                    (focusout)="hideResultsFn()">
                 <button class="bannerIcon">
                     <img src="../../../../assets/images/search.svg">
                 </button>
             </div>
             <!-- Data From Search -->
-            <div class="col-12 results shadow" [hidden]="!showResults">
+            <div class=" results shadow" [hidden]="!showResults">
                 <div class="col-12">
                     <div class="title" [hidden]="(testOne | bannerSearch:query).length === 0">
                         <p>Opportunities</p>
                     </div>
                     <div class="text" *ngFor="let t1 of testOne  | slice:0:3  | bannerSearch:query; let i=index">
-                        <img src="../../../../assets/images/test.svg">
+                        <img src="../../../../assets/images/22.svg">
                         <p>{{t1.title}}</p>
                     </div>
                 </div>
@@ -52,7 +108,7 @@
                         <p>Services</p>
                     </div>
                     <div class="text" *ngFor="let t2 of testTwo  | slice:0:3 | bannerSearch:query; let i=index">
-                        <img src="../../../../assets/images/test.svg">
+                        <img src="../../../../assets/images/22.svg">
                         <p>{{t2.title}}</p>
                     </div>
                 </div>
@@ -62,12 +118,13 @@
                         <p>Customers</p>
                     </div>
                     <div class="text" *ngFor="let t3 of testThree  | slice:0:3 | bannerSearch:query; let i=index ">
-                        <img src="../../../../assets/images/test.svg">
+                        <img src="../../../../assets/images/22.svg">
                         <p>{{t3.title}}</p>
                     </div>
                 </div>
                 <!-- End Row -->
-                <div class="title" [hidden]="!((testOne | bannerSearch:query).length === 0 && (testTwo | bannerSearch:query).length === 0 && (testThree | bannerSearch:query).length === 0)">
+                <div class="title"
+                    [hidden]="!((testOne | bannerSearch:query).length === 0 && (testTwo | bannerSearch:query).length === 0 && (testThree | bannerSearch:query).length === 0)">
                     No Data Found.
                 </div>
                 <!-- End Row -->
@@ -75,7 +132,7 @@
             <!-- End Data From Search -->
         </div>
     </div>
-    <!-- End Search -->
+    <!-- End Responsive Search -->
 
     <!-- Customers -->
     <div class="container-fluid customerSection">
@@ -83,7 +140,7 @@
             <div class="col-12">
                 <h2>Customers</h2>
             </div>
-            <div class="col-3" *ngFor="let customer of bannerCustomers  | slice:0:4; let i=index">
+            <div class="col-lg-3 col-md-3 col-6" *ngFor="let customer of bannerCustomers  | slice:0:4; let i=index">
                 <div class="card text-white border mb-3">
                     <div class="card-body text-center">
                         <img src="{{customer.thumbnailUrl}}">

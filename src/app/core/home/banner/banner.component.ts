@@ -11,17 +11,62 @@ import { HomeService } from 'src/app/shared/services/home.service';
 @Component({
   selector: 'app-banner',
   animations: [
+    // Search Input Animation
     trigger('focusInOut', [
       state('focusOn', style({
-        width: '80%'
+        width: '778px'
       })),
       state('focusOut', style({
-        width: '60%'
+        width: '655px'
+      })),
+      state('btnOn', style({
+        right: '16%'
+      })),
+      state('btnOut', style({
+        right: '22.5%'
+      })),
+      state('textOn', style({
+        fontSize : '35px'
+      })),
+      state('textOut', style({
+        fontSize : '60px'
       })),
       transition('focusOn => focusOut', [
-        animate('1s')
+        animate('0.5s')
       ]),
       transition('focusOut => focusOn', [
+        animate('0.5s')
+      ]),
+      transition('btnOn => btnOut', [
+        animate('0.5s')
+      ]),
+      transition('btnOut => btnOn', [
+        animate('0.5s')
+      ]),
+      transition('textOn => textOut', [
+        animate('0.5s')
+      ]),
+      transition('textOut => textOn', [
+        animate('0.5s')
+      ]),
+    ]),
+     // Results Container Animation
+    trigger('resultsInOut', [
+      state('resultsOn', style({
+        height: '*',
+        opacity: '1',
+        top: '252px'
+      })),
+      state('resultsOut', style({
+        height: '0px',
+        opacity: '0',
+        overflow: 'hidden',
+        top: '312px'
+      })),
+      transition('resultsOn => resultsOut', [
+        animate('0.5s')
+      ]),
+      transition('resultsOut => resultsOn', [
         animate('0.5s')
       ]),
     ]),
@@ -34,7 +79,7 @@ bannerCustomers: any;
 testOne: any;
 testTwo: any;
 testThree: any;
-showResults = false;
+
   constructor(private _homeService: HomeService) { }
 
   ngOnInit() {
@@ -45,18 +90,18 @@ showResults = false;
   }
 // Animations
   isFocus = false;
-
+  showResults = false;
   toggle() {
     this.isFocus = !this.isFocus;
   }
   // Focus on Search input
   showResultsFn(){
-    this.showResults =! this.showResults;
+    this.showResults = true;
     this.isFocus = true;
   }
    // Focus out Search input
   hideResultsFn(){
-    this.showResults =! this.showResults;
+    this.showResults = false;
     this.isFocus = false;
   }
   // Banner Customers Data
