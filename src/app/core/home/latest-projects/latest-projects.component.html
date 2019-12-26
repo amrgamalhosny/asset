@@ -1,0 +1,86 @@
+<div class="latest-projects-section">
+    <div>
+      <div class="row latest-projects-header">
+        <div class="col-10  latest-projects-title">
+          <h2 class="latest-title">LATEST</h2>
+          <h1 class="projects-title">PROJECTS</h1>
+        </div>
+        <div class="col-2 projects-view-all">
+          VIEW ALL
+        </div>
+      </div>
+  
+      <div class="row latest-projects-body">
+        <div [className]="cars.length>=2 ? 'col-12' : 'col-6 hide-arrows'">
+          <p-carousel [value]="cars" [numVisible]="2.5" [numScroll]="1">
+            <ng-template let-car pTemplate="item">
+              <div class="col-12 pro">
+                <div class="card project-card">
+                  <div class="card-body">
+  
+                    <div class="d-flex justify-content-between">
+                      <div class="project-details">
+                        <p class="project-country">
+                          {{car.country}}
+                        </p>
+                        <span class="project-date">
+                          25 may 2019
+                        </span>
+                      </div>
+  
+                      <div>
+                        <img src="../../../../assets/images/project.png" class="img-fluid">
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-sm-12 col-xs-12">
+                        <h2 class="project-card-title"> Knowledge Base </h2>
+                      </div>
+                    </div>
+  
+                    <hr class="project-hr" align="left">
+                    <p class="project-card-text">
+                      SAP ERP consolidates internal and external elements into a single,
+                      living structure that goes beyond traditional ERP software. In other words, it connects all your
+                      processes, provides youwith live information and insights,
+                      and seamlessly integrates your enterprise with the digital world at large.
+                    </p>
+  
+                    <div class="row ">
+                      <div class=" col-3">
+                        <img src="../../../../assets/images/3.jpg" class="project-img-avatar">
+                      </div>
+                      <div class=" col-9">
+                        <div class="row latest-projects-emp-name">
+                          <div class="col-sm-12">
+                            Mohamed Ali
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12 project-emp-title">
+                            Account Manager
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+  
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </p-carousel>
+  
+        </div>
+  
+  
+      </div>
+  
+    </div>
+  </div>
+  
+  
+  <app-solutions></app-solutions>
+  <app-news></app-news>
+  <app-customers></app-customers>

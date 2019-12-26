@@ -1,0 +1,157 @@
+.customers-industries-section {
+    background-color: #F7F7F8;
+    background-image: url(../../../../assets/images/customers-bck.png);
+    background-position: left 300px top;
+    background-repeat: no-repeat;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 9%;
+    font-family: OswaldReg;
+    overflow: hidden;
+}
+
+@media (max-width:600px) {
+    ::ng-deep .customers-industries-section button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all {
+        right: 19% !important;
+        bottom: -8% !important;
+    }
+}
+
+@media (max-width:600px) {
+    ::ng-deep .customers-industries-section button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+        bottom: -8% !important;
+    }
+}
+
+::ng-deep .customers-industries-section .hide-arrows button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all, ::ng-deep .customers-industries-section .hide-arrows button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+    display: none;
+}
+
+::ng-deep .customers-industries-section button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all {
+    position: absolute;
+    right: 7.5%;
+    bottom: -14%;
+    box-shadow: 0px 6px 27px #00000080;
+}
+
+::ng-deep .customers-industries-section button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+    position: absolute;
+    right: 5%;
+    bottom: -14%;
+    box-shadow: 0px 6px 27px #00000080;
+}
+
+::ng-deep .customers-industries-section .ui-carousel-prev, ::ng-deep .customers-industries-section .ui-carousel-next {
+    width: 2em;
+    height: 2em;
+    color: grey !important;
+}
+
+.customers-body>.col-12, .industries-body>.col-12 {
+    padding-right: 0px;
+}
+
+.customers-industries-header {
+    margin-bottom: 3.5%;
+}
+
+.customers-body, .industries-body {
+    margin-left: -3%;
+}
+
+.customers-industries-title {
+    opacity: 0.55;
+    padding-bottom: 1%;
+}
+
+.customers-industries-title.active {
+    opacity: 1;
+}
+
+.customers-industries-title.active::after {
+    display: block;
+    content: '';
+    width: 19%;
+    height: 5px;
+    background: #FF1C4C;
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+}
+
+.req-title {
+    font-family: MyriadReg;
+    margin: 0px;
+}
+
+.cust-ind-title {
+    font-family: OswaldBold;
+}
+
+.customers-industries-view-all {
+    font-family: OswaldReg;
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    text-align: right;
+    margin-top: 3%;
+    padding-right: 5%;
+}
+
+.customers-industries-view-all:after {
+    content: '❯';
+    /* content: '>'; */
+    color: #FFFFFF;
+}
+
+.customers-card {
+    padding: 4%;
+    box-shadow: 5px 9px 16px #0000001A;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.customer-logo-cont {
+    background-color: #FFFFFF;
+    padding: 5% 2%;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.customer-stat-cont {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    padding: 8% 5%;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.customer-card-text {
+    text-align: center;
+    color: #737373;
+    font-family: OswaldReg;
+    margin-top: 8%;
+    /* margin-bottom: 4%; */
+    line-height: 23px;
+    height: 75px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+}
+
+.customer-stat-cont-title {
+    font-size: 15px;
+    font-family: MyriadReg;
+    margin-bottom: 4%;
+}
+
+.customer-stat-cont-header {
+    font-family: OswaldBold;
+    margin-bottom: 6%;
+    font-size: 32px;
+}
+
+.number {
+    color: #E60000 !important;
+    font-family: OswaldMed;
+}
+
+.number-title {
+    font-family: OswaldLight;
+}

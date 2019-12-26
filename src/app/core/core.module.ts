@@ -7,16 +7,22 @@ import { FormsModule } from '@angular/forms';
 import { BannerSearchPipe } from '../shared/pipes/banner-search.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './home/navbar/navbar.component';
+import { LatestProjectsComponent } from './home/latest-projects/latest-projects.component';
+import { NewsComponent } from './home/news/news.component';
+import { CustomersComponent } from './home/customers/customers.component';
+import { SolutionsComponent } from './home/solutions/solutions.component';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
-  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, NavbarComponent],
+  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, NavbarComponent, LatestProjectsComponent, NewsComponent, CustomersComponent, SolutionsComponent],
   imports: [
     CommonModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   exports : [
-    BannerComponent
+    BannerComponent, LatestProjectsComponent
   ]
 })
 export class CoreModule { }

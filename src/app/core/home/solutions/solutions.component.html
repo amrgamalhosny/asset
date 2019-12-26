@@ -1,0 +1,155 @@
+<div class="solutions-services-section">
+    <div>
+      <div class="row solutions-services-header">
+        <div class="col-md-3 solutions-services-title" [class.active]="showFirstTab" (click)="toggleSolutionService(0)">
+          <p class="req-title">TOP REQUIRED </p>
+          <h1 class="sol-serv-title">SOLUTIONS</h1>
+        </div>
+        <div class="col-md-3  solutions-services-title" [class.active]="!showFirstTab" (click)="toggleSolutionService(1)">
+          <p class="req-title">TOP REQUIRED </p>
+          <h1 class="sol-serv-title">SERVICES</h1>
+        </div>
+        <div class="col-md-6  projects-view-all">
+          VIEW ALL
+        </div>
+      </div>
+  
+  
+      <div class="row solutions-body" [hidden]="!showFirstTab">
+  
+        <div [className]="cars.length>=2 ? 'col-12' : 'col-6 hide-arrows'">
+          <p-carousel [value]="cars" [numVisible]="2.5" [numScroll]="1">
+            <ng-template let-car pTemplate="item">
+              <div class="col-12">
+                <div class="card solutions-card">
+                  <div class="card-body">
+  
+                    <span class="solution-card-title-type"> ERP </span>
+                    <h5 class="solution-card-title"> Enterprise Resourse Planning</h5>
+  
+                    <p class="solution-card-text">
+                      SAP ERP consolidates internal and external elements into a single,
+                      living structure that goes beyond traditional ERP software. In other words, it connects all your
+                      processes, provides youwith live information and insights,
+                      and seamlessly integrates your enterprise with the digital world at large.
+                    </p>
+  
+                    <div class="solution-industries-container">
+                      
+                      <span class="solution-industries">
+                        INDUSTRIES
+                      </span>
+  
+                      <div class="solution-industries-imgs">
+                        <img src="../../../../assets/images/telecommunication.png" class="solution-img-avatar">
+                        <img src="../../../../assets/images/financial-services@2x.png" class="solution-img-avatar">
+                        <img src="../../../../assets/images/3.jpg" class="solution-img-avatar">
+                        <img src="../../../../assets/images/3.jpg" class="solution-img-avatar">
+                        <img src="../../../../assets/images/3.jpg" class="solution-img-avatar">
+                      </div>
+  
+                    </div>
+  
+                    <div class="solution-customers-container">
+                      
+                      <span class="solution-industries">
+                        CUSTOMERS
+                      </span>
+  
+                      <div class="solution-industries-imgs ">
+                        <div class="customer-img-avatar" >
+                          <img src="../../../../assets/images/vodafone.png" >
+                        </div>
+                        <div class="customer-img-avatar">
+                          <img src="../../../../assets/images/BMW-logo-4.png" >
+                        </div>
+                        <div class="customer-img-avatar">
+                          <img src="../../../../assets/images/CIB Logo.png" >
+                        </div>
+                        <div class="customer-img-avatar">
+                          <img src="../../../../assets/images/download1.png" >
+                        </div>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </p-carousel>
+  
+        </div>
+  
+      </div>
+  
+      <div class="row services-body" [hidden]="showFirstTab">
+        
+        <div [className]="cars.length>=2 ? 'col-12' : 'col-6 hide-arrows'">
+          <p-carousel [value]="cars" [numVisible]="2.5" [numScroll]="1">
+            <ng-template let-car pTemplate="item">
+              <div class="col-12">
+                <div class="card solutions-card">
+                  <div class="card-body">
+  
+                    <span class="solution-card-title-type"> SERVICE </span>
+                    <h5 class="solution-card-title"> Enterprise Resourse Planning</h5>
+  
+                    <p class="solution-card-text">
+                      SAP ERP consolidates internal and external elements into a single,
+                      living structure that goes beyond traditional ERP software. In other words, it connects all your
+                      processes, provides youwith live information and insights,
+                      and seamlessly integrates your enterprise with the digital world at large.
+                    </p>
+  
+                    <div class="solution-industries-container">
+                      
+                      <span class="solution-industries">
+                        INDUSTRIES
+                      </span>
+  
+                      <div class="solution-industries-imgs">
+                        <img src="../../../../assets/images/telecommunication.png" class="solution-img-avatar">
+                        <img src="../../../../assets/images/financial-services@2x.png" class="solution-img-avatar">
+                        <img src="../../../../assets/images/3.jpg" class="solution-img-avatar">
+                        <img src="../../../../assets/images/3.jpg" class="solution-img-avatar">
+                        <img src="../../../../assets/images/3.jpg" class="solution-img-avatar">
+                      </div>
+  
+                    </div>
+  
+                    <div class="solution-customers-container">
+                      
+                      <span class="solution-industries">
+                        CUSTOMERS
+                      </span>
+  
+                      <div class="solution-industries-imgs ">
+                        <div class="customer-img-avatar" >
+                          <img src="../../../../assets/images/vodafone.png" >
+                        </div>
+                        <div class="customer-img-avatar">
+                          <img src="../../../../assets/images/BMW-logo-4.png" >
+                        </div>
+                        <div class="customer-img-avatar">
+                          <img src="../../../../assets/images/CIB Logo.png" >
+                        </div>
+                        <div class="customer-img-avatar">
+                          <img src="../../../../assets/images/download1.png" >
+                        </div>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </p-carousel>
+  
+        </div>
+      </div>
+  
+  
+  
+  
+    </div>
+  </div>

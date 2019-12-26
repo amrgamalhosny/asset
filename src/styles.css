@@ -12,3 +12,29 @@ body{
     min-height: 0;
     z-index: 99;
 }
+
+
+@font-face {
+    font-family: MyriadReg;
+    src: url(assets/fonts/myriad/MyriadProRegular.ttf);
+}
+
+@font-face{
+    font-family: OswaldBold;
+    src: url(assets/fonts/oswald/Oswald-Bold.ttf);
+}
+
+@font-face{
+    font-family: OswaldReg;
+    src: url(assets/fonts/oswald/Oswald-Regular.ttf);
+}
+
+@font-face{
+    font-family: OswaldMed;
+    src: url(assets/fonts/oswald/Oswald-Medium.ttf);
+}
+
+@font-face{
+    font-family: OswaldLight;
+    src: url(assets/fonts/oswald/Oswald-Light.ttf);
+}

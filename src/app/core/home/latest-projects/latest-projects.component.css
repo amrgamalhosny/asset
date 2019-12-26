@@ -1,0 +1,182 @@
+/* Latest Projects Begin */
+
+.latest-projects-section {
+    background-color: #F7F7F8;
+    background-image: url(../../../../assets/images/project-bck.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 9%;
+    font-family: OswaldReg;
+    overflow-x: hidden;
+  }
+  
+  .latest-projects-body > .col-12 {
+    padding-right: 0px;
+  }
+  
+  .latest-projects-body {
+    margin-left: -3%;
+  }
+  
+  .latest-title {
+    font-family: MyriadReg;
+    margin: 0px;
+  }
+  
+  .projects-title {
+    font-family: OswaldBold;
+  }
+  
+  .projects-view-all {
+    font-family: OswaldReg;
+    color: #525252;
+    font-size: 14px;
+    margin-top: 3%;
+    letter-spacing: 1.4px;
+    text-align: right;
+    padding-right: 5%;
+  }
+  
+  .projects-view-all:after {
+    content: '❯';
+    /* content: '>'; */
+    color: #E60000;
+  }
+  
+  .latest-projects-header {
+    margin-bottom: 3.5%;
+  }
+  
+  ::ng-deep .ui-carousel-dots-container {
+    display: none;
+  }
+  .pro{
+    min-height: 450px;
+  }
+  .project-card {
+    position: absolute;
+    top: 3%;
+    padding: 7%;
+    box-shadow: 5px 9px 16px #00000026;
+    border-radius: 8px;
+    min-height: 375px;
+    transition: all .5s ease;
+    overflow: hidden;
+  }
+  .project-card:hover {
+    transform: ScaleY(1.05);
+    cursor: pointer;
+  }
+  
+  .project-card:hover .project-hr{
+    width:60%;
+  }
+  .project-country {
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-right: 10px;
+    font-size: 12px;
+    text-align: center;
+    min-width: 70px;
+    max-width: 100px;
+    overflow: hidden;
+    float: left;
+    margin-top: 2px;
+  }
+  
+  .project-date {
+    font-family: OswaldReg;
+    font-size: 16px;
+  }
+  
+  .project-card-title {
+    font-family: OswaldBold;
+    margin-top: -4%;
+    color: #0F0F0F;
+  }
+  
+  @media (max-width:600px) {
+    .project-card-title {
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width:600px) {
+    ::ng-deep .latest-projects-section button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all {
+      right: 19% !important;
+      bottom: -8% !important; 
+    }
+  }
+  
+  @media (max-width:600px) {
+    ::ng-deep .latest-projects-section button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+      bottom: -8% !important; 
+    }
+  }
+  
+   ::ng-deep .latest-projects-section .hide-arrows button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all ,
+    ::ng-deep .latest-projects-section .hide-arrows button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all{
+    display: none;
+  }
+  
+  
+  ::ng-deep .latest-projects-section button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all {
+    position: absolute;
+    right: 7.5%;
+    bottom: -14%;
+    box-shadow: 0px 6px 27px #00000080;
+  }
+  
+  ::ng-deep .latest-projects-section button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+    position: absolute;
+    right: 5%;
+    bottom: -14%;
+    box-shadow: 0px 6px 27px #00000080;
+  }
+  
+  ::ng-deep .latest-projects-section .ui-carousel-prev, ::ng-deep .latest-projects-section .ui-carousel-next {
+    width: 2em;
+    height: 2em;
+    color: grey !important;
+  }
+  
+  .project-hr {
+    background-color: #FF1C4C;
+    height: 3px;
+    width: 10%;
+    transition: all .5s ease;
+  }
+  
+  .project-card-text {
+    color: #737373;
+    font-family: OswaldReg;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    line-height: 23px;
+    max-height: 70px;
+    min-height: 70px;
+    overflow: hidden;
+  }
+  
+  .project-img-avatar {
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .latest-projects-emp-name {
+    font-family: OswaldMed;
+    color: #444444;
+    font-size: 16px;
+    margin-top: 3%;
+  }
+  
+  .project-emp-title {
+    overflow: hidden;
+    max-height: 20px;
+  }
+  
+  /* Latest Projects End */
