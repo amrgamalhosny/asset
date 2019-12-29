@@ -60,12 +60,14 @@
 }
 
 .customers-industries-title {
-    opacity: 0.55;
+    opacity: 0.5;
     padding-bottom: 1%;
+    color: #000000;
 }
 
 .customers-industries-title.active {
     opacity: 1;
+    color: #000000;
 }
 
 .customers-industries-title.active::after {
@@ -79,6 +81,18 @@
     left: 5%;
 }
 
+.customers-industries-title.active:hover {
+    cursor: pointer;
+    color: #000000;
+    opacity: 1;
+}
+
+.customers-industries-title:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
 .req-title {
     font-family: MyriadReg;
     margin: 0px;
@@ -86,6 +100,7 @@
 
 .cust-ind-title {
     font-family: OswaldBold;
+    color: #000000;
 }
 
 .customers-industries-view-all {
@@ -96,13 +111,27 @@
     text-align: right;
     margin-top: 3%;
     padding-right: 5%;
+    transition: all .5s ease;
 }
 
 .customers-industries-view-all:after {
     content: '❯';
-    /* content: '>'; */
     color: #FFFFFF;
+    position: relative;
+    left: 0px;
+    transition: all .5s ease;
 }
+
+.customers-industries-view-all:hover {
+    cursor: pointer;
+    font-family: OswaldBold;
+    left: 3px;
+}
+
+.customers-industries-view-all:hover:after {
+    left: 10px;
+}
+
 
 .customers-card {
     padding: 4%;

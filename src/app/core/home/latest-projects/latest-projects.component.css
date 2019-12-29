@@ -38,16 +38,15 @@
     text-align: right;
     padding-right: 5%; 
     transition: all .5s ease;
-    left:0px;
+
   }
   
   .projects-view-all:after {
     content: '❯';
-    /* content: '>'; */
     color: #E60000;
     position: relative;
-    left:0px;
     transition: all .5s ease;
+    left: 0px;
   }
   
   .projects-view-all:hover{

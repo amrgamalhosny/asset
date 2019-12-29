@@ -60,7 +60,7 @@
     padding-right: 0px;
 }
 
-.col-12 .sol{
+.col-12 .sol {
     min-height: 490px;
 }
 
@@ -77,11 +77,10 @@
 
 .solutions-card:hover {
     transform: translateY(-3%);
-    padding-top: 10%; 
+    padding-top: 9.7%;
     padding-bottom: 10%;
     cursor: pointer;
 }
-
 
 .solutions-card:hover .solution-card-title-type::after {
     width: 60%;
@@ -91,7 +90,6 @@
     font-family: OswaldBold;
     font-size: 220%;
     letter-spacing: 1.2px;
-
 }
 
 .solution-card-title {
@@ -126,12 +124,26 @@
     text-align: right;
     margin-top: 3%;
     padding-right: 5%;
+    transition: all .5s ease;
 }
 
 .projects-view-all:after {
     content: '❯';
     /* content: '>'; */
     color: #FFFFFF;
+    position: relative;
+    left: 0px;
+    transition: all .5s ease;
+}
+
+.projects-view-all:hover {
+    cursor: pointer;
+    font-family: OswaldBold;
+    left: 3px;
+}
+
+.projects-view-all:hover:after {
+    left: 10px;
 }
 
 .solutions-services-title {
@@ -143,8 +155,8 @@
     cursor: pointer;
 }
 
-.solutions-services-title:hover{
-    opacity:0.5;
+.solutions-services-title:hover {
+    opacity: 0.5;
     cursor: pointer;
 }
 
@@ -164,7 +176,7 @@
     transition: all .5s ease;
 }
 
-.solution-card-title-type::after{
+.solution-card-title-type::after {
     display: block;
     content: '';
     width: 10%;
@@ -177,6 +189,7 @@
 .solutions-services-title.active:hover:after {
     width: 60%;
 }
+
 
 .solution-industries-container {
     margin: 7% 0%;

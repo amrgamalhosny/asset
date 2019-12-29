@@ -25,13 +25,31 @@
     letter-spacing: 1.4px;
     text-align: right;
     /* padding-right: 5%; */
+    transition: all .5s ease;
 }
 
 .news-view-all:after {
     content: '❯';
-    /* content: '>'; */
     color: #E60000;
+    position: relative;
+    left: 0px;
+    transition: all .5s ease;
 }
+
+.news-view-all:hover {
+    cursor: pointer;
+    font-family: OswaldBold;
+    left: 3px;
+}
+
+.news-view-all:hover:after {
+    left: 10px;
+}
+
+
+
+
+
 
 .latest-news-title {
     padding-bottom: 1%;
@@ -56,6 +74,12 @@
 .news-card {
     box-shadow: 5px 9px 16px #00000012;
     border-radius: 6px;
+    transition: all .3s ease;
+}
+
+.news-card:hover{
+    transform: translateY(-3%);
+    cursor: pointer;
 }
 
 .news-card-body {

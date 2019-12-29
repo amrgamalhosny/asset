@@ -22,7 +22,7 @@ import { CarouselModule } from 'primeng/carousel';
     CarouselModule
   ],
   exports : [
-    BannerComponent, LatestProjectsComponent
+    BannerComponent, LatestProjectsComponent, NewsComponent, CustomersComponent, SolutionsComponent
   ]
 })
 export class CoreModule { }
