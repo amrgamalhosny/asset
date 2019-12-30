@@ -1,1 +1,375 @@
-<p>search works!</p>
+<!-- Search -->
+<div class="searchCont">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="searchTitle">Results for <span class="searchWord">"{{query}}"</span> <small> Showing 12
+                        results</small></p>
+                <input type="search" class="searchInput" placeholder="Search..." name="search" [(ngModel)]="query">
+                <button class="searchIcon">
+                    <img src="../../../../assets/images/searchGrey.svg">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Search -->
+
+<!-- Content -->
+<div class="contentCont">
+
+    <div class="container-fluid">
+        <div class="row w-100">
+            <!-- Filters -->
+            <div class="col-md-3 filtersCont">
+                <div class="pl-4">
+                    <!-- Country Filter -->
+                    <div class="mb-4">
+                        <h6 class="mb-3">Country</h6>
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">Portugal</span>
+                                <input type="checkbox"  
+                                [(ngModel)]="por" (click) = "check('Portugal')">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">11</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">UNITED KINGDOM</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">02</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">Egypt</span>
+                                <input type="checkbox" (click) = "check('Egypt')">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">05</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                    </div>
+                    <!-- End Country Filter -->
+                    <!-- Industry Filter -->
+                    <div class="mb-4">
+                        <h6 class="mb-3">Industry</h6>
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">Telecommunication</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">11</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">Financial Services</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">05</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                    </div>
+                    <!-- End Industry Filter -->
+                    <!-- Solutions Filter -->
+                    <div class="mb-4">
+                        <h6 class="mb-3">Solutions</h6>
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">CRM</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">11</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">ERP</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">02</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">EPM</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">05</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">BIA</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">05</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                    </div>
+                    <!-- End Solutions Filter -->
+                    <!-- Services Filter -->
+                    <div>
+                        <h6 class="mb-3">Services</h6>
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">Smart Marketing</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">11</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">Smart Grid Solutions</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">02</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">Energy Audits</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">05</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <label class="customCheck">
+                                <span class="checkTitle">Energy Management</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <small class="text-grey">05</small>
+                        </div>
+                        <!-- End Checkbox row -->
+                    </div>
+                    <!-- End Services Filter -->
+                </div>
+            </div>
+            <!-- End Filters -->
+            <!-- Results -->
+            <div class="col-md-9 resultsCont">
+                <ngb-tabset>
+                    <!-- Start All tab -->
+                    <ngb-tab>
+                        <ng-template ngbTabTitle>ALL</ng-template>
+                        <ng-template ngbTabContent>
+                            <!-- All -->
+                            <!-- Customers -->
+                            <div class="container">
+                                <div class="card resultsCustomer row" *ngFor="let cust of customers | bannerSearch:query;">
+                                    <div class="col-md-3 resultsCustomerImg">
+                                        <div class="mt-50">
+                                            <img class="card-img-top" src="../../../assets/images/vod2.png"
+                                                alt="Card image cap">
+                                        </div>
+
+                                    </div>
+                                    <div class="card-body col-md-9 resultsCustomerContent">
+                                        <div class="card-title">
+                                            <div class="custNo">
+                                                <h1>08</h1>
+                                                <h6 class="text-grey">Projects</h6>
+                                            </div>
+                                            <div class="custNo">
+                                                <h1>05</h1>
+                                                <h6 class="text-grey">Solutions</h6>
+                                            </div>
+                                            <div class="custNo">
+                                                <h1>03</h1>
+                                                <h6 class="text-grey">Services</h6>
+                                            </div>
+                                        </div>
+
+                                        <p class="card-text text-grey">{{cust.desc}}</p>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <!-- End Customers -->
+                            <!-- Solutions -->
+                            <div class="container">
+                                <div class="card resultsSolution row"  *ngFor="let sol of solutions | bannerSearch:query;">
+                                    <div class="card-body col-md-12 resultsSolutionContent"  
+                                   >
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <div class="resultsSolutionDate">
+                                                    <span>{{sol.country}}</span>
+                                                    <small>25 may 2019</small>
+                                                </div>
+                                                <div class="resultsSolutionTitle">
+                                                    <p><span>{{sol.name}}</span> {{sol.full}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 resultsSolutionImg">
+                                                <img src="../../../assets/images/vodafone.png">
+                                            </div>
+                                        </div>
+                                        <p class="card-text text-grey">{{sol.desc}}</p>
+                                        <div class="resultsSolutionUser">
+                                            <img src="../../../assets/images/user.jpg">
+                                            <div>
+                                                <p class="userName">
+                                                    Amr Gamal
+                                                </p>
+                                                <p class="userTitle">
+                                                    <span>ASSET</span> Consultant
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Solutions -->
+                            <!-- Services -->
+                            <div class="container">
+                                <div class="card resultsSolution row" *ngFor="let serv of services | bannerSearch:query;">
+                                    <div class="card-body col-md-12 resultsServiceContent">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="resultsSolutionTitle">
+                                                    <p><span>{{serv.name}}</span> {{serv.full}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="card-text text-grey">{{serv.desc}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Services -->
+                            <!-- End All -->
+                        </ng-template>
+                    </ngb-tab>
+                    <!-- End All tab -->
+                    <!-- Start Solutions tab -->
+                    <ngb-tab>
+                        <ng-template ngbTabTitle>SOLUTIONS</ng-template>
+                        <ng-template ngbTabContent>
+                            <!-- SOLUTIONS -->
+                            <div class="container">
+                                <div class="card resultsSolution row"  *ngFor="let sol of solutions | bannerSearch:query">
+                                    <div class="card-body col-md-12 resultsSolutionContent"  
+                                   >
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <div class="resultsSolutionDate">
+                                                    <span>{{sol.country}}</span>
+                                                    <small>25 may 2019</small>
+                                                </div>
+                                                <div class="resultsSolutionTitle">
+                                                    <p><span>{{sol.name}}</span> {{sol.full}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 resultsSolutionImg">
+                                                <img src="../../../assets/images/vodafone.png">
+                                            </div>
+                                        </div>
+                                        <p class="card-text text-grey">{{sol.desc}}</p>
+                                        <div class="resultsSolutionUser">
+                                            <img src="../../../assets/images/user.jpg">
+                                            <div>
+                                                <p class="userName">
+                                                    Amr Gamal
+                                                </p>
+                                                <p class="userTitle">
+                                                    <span>ASSET</span> Consultant
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <!-- End SOLUTIONS -->
+                        </ng-template>
+                    </ngb-tab>
+                    <!-- End Solutions tab -->
+                    <!-- Start Services tab -->
+                    <ngb-tab>
+                        <ng-template ngbTabTitle>SERVICES</ng-template>
+                        <ng-template ngbTabContent>
+                            <!-- SERVICES -->
+                            <div class="container">
+                                <div class="card resultsSolution row" *ngFor="let serv of services | bannerSearch:query;">
+                                    <div class="card-body col-md-12 resultsServiceContent">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="resultsSolutionTitle">
+                                                    <p><span>{{serv.name}}</span> {{serv.full}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="card-text text-grey">{{serv.desc}}</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- End SERVICES -->
+                        </ng-template>
+                    </ngb-tab>
+                    <!-- End Services tab -->
+                    <!-- Start Customers tab -->
+                    <ngb-tab>
+                        <ng-template ngbTabTitle>CUSTOMERS</ng-template>
+                        <ng-template ngbTabContent>
+                            <!-- CUSTOMERS -->
+                            <div class="container">
+                                <div class="card resultsCustomer row" *ngFor="let cust of customers | bannerSearch:query;">
+                                    <div class="col-md-3 resultsCustomerImg">
+                                        <div class="mt-50">
+                                            <img class="card-img-top" src="../../../assets/images/vod2.png"
+                                                alt="Card image cap">
+                                        </div>
+
+                                    </div>
+                                    <div class="card-body col-md-9 resultsCustomerContent">
+                                        <div class="card-title">
+                                            <div class="custNo">
+                                                <h1>08</h1>
+                                                <h6 class="text-grey">Projects</h6>
+                                            </div>
+                                            <div class="custNo">
+                                                <h1>05</h1>
+                                                <h6 class="text-grey">Solutions</h6>
+                                            </div>
+                                            <div class="custNo">
+                                                <h1>03</h1>
+                                                <h6 class="text-grey">Services</h6>
+                                            </div>
+                                        </div>
+
+                                        <p class="card-text text-grey">{{cust.desc}}</p>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <!-- End CUSTOMERS -->
+                        </ng-template>
+                    </ngb-tab>
+                    <!-- End Customers tab -->
+                </ngb-tabset>
+            </div>
+            <!-- End Results -->
+        </div>
+    </div>
+
+</div>
+<!-- End Content -->

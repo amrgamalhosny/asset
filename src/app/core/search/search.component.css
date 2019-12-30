@@ -1,0 +1,155 @@
+/* Search */
+.searchCont{
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    min-height: 200px ;
+}
+.searchTitle{
+    font-size: 30px;
+}
+.searchTitle .searchWord{
+    font-weight: 700;
+}
+.searchTitle small{
+    font-size: 16px;
+}
+.searchCont .searchInput{
+    background-color: transparent;
+    border: 2px solid #919191;
+    width:60%;
+    height: 50px;
+    padding: 0 10px;
+    color: #282828;
+    outline: 0;
+    z-index: 6;
+}
+.searchCont ::placeholder {
+    color: #282828;
+    opacity: 1; /* Firefox */
+  }
+  
+  .searchCont :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #282828;
+  }
+  
+  .searchCont ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #282828;
+  }
+  .searchIcon{
+    position: absolute;
+    right: 21%;
+    top: 55%;
+    background: transparent;
+    border: none;
+    border-left: 2px solid #919191;
+    height: 50px;
+    padding-left: 18px;
+    outline: 0;
+  }
+
+  /* End Search */
+
+  /* Content */
+.contentCont{
+    background-color: #F7F7F8;
+}
+  /* End Content */
+
+ /* Filters Content */
+  .filtersCont{
+      border-right: 1px solid #E5E5E5;
+      padding: 30px;
+  }
+  /* End Filters Content */
+
+   /* Results Content */
+   .resultsCont{
+    padding: 30px;
+    }
+    .resultsCont \deep\ .nav-tabs \deep\  .nav-link {
+        color: red;
+    }
+    /* Customers */
+    .resultsCustomer , .resultsSolution, .resultsService{
+        flex-direction: row;
+        padding: 0;
+        box-shadow: 3px 5px 12px #00000017;
+        border: none;
+        margin-bottom: 40px;
+    }
+    .resultsCustomerImg{
+        text-align: center;
+        box-shadow: 5px 9px 16px #00000012;
+    }
+    .resultsCustomerImg img{
+        width: 50%;
+    }
+    .resultsCustomerContent{
+        padding: 25px;
+    }
+    .resultsCustomerContent .card-title{
+        display: flex;
+    }
+    .resultsCustomerContent .card-title .custNo{
+        text-align: center;
+        margin-right: 100px;
+    }
+    .mt-50{
+        margin-top: 50px;
+    }
+/* End Customers */
+
+/* Solutions */
+.resultsSolutionDate{
+    margin-bottom: 15px;
+}
+    .resultsSolutionDate span{
+        background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 1px 15px;
+    margin-right: 10px;
+    }
+    .resultsSolutionDate small{
+        font-weight: 700;
+        font-size: 11px;
+    }
+    .resultsSolutionTitle{
+        font-size: 25px;
+    }
+    .resultsSolutionTitle span{
+        font-weight: 700;
+        border-bottom: 3px solid #FF1C4C;
+    }
+    .resultsSolutionImg{
+        text-align: right;
+    }
+    .resultsSolutionImg img{
+        width: 50%;
+        margin-top: 20px;
+        }
+        .resultsSolutionUser {
+            display: flex;
+            height: 40px;
+        }
+        .resultsSolutionUser img{
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .resultsSolutionUser .userName{
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 0px;
+        }
+        .resultsSolutionUser .userTitle{
+            font-size: 12px;
+            font-weight: normal;
+            margin-bottom: 0px;
+        }
+        .resultsSolutionUser .userTitle span{
+            font-weight: 700;
+        }
+  /* End Solutions */
+/* End Results Content */

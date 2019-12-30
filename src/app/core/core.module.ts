@@ -6,17 +6,20 @@ import { BannerComponent } from './home/banner/banner.component';
 import { FormsModule } from '@angular/forms';
 import { BannerSearchPipe } from '../shared/pipes/banner-search.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './home/navbar/navbar.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { SearchPipe } from '../shared/pipes/search.pipe';
 
 @NgModule({
-  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, NavbarComponent],
+  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe,SearchPipe],
   imports: [
     CommonModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   exports : [
-    BannerComponent
+    BannerComponent,
+    SearchComponent
   ]
 })
 export class CoreModule { }

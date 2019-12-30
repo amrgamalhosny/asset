@@ -1,0 +1,18 @@
+ [
+        {
+            "name": "Vodafone",
+            "desc": "This is Vodafone description.",
+            "solutions" : {
+                "title": "Vodafone Solutions",
+                "desc": "This is Vodafone solution description."
+            }
+        },
+        {
+            "name": "Orange",
+            "desc": "This is Orange description.",
+            "solutions" : {
+                "title": "Orange Solutions",
+                "desc": "This is Orange solution description."
+            }
+        }
+    ]
