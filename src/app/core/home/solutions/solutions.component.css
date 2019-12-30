@@ -1,0 +1,234 @@
+.solutions-services-section {
+    background-image: url(../../../../assets/images/002.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 9%;
+    background-color: #152034;
+    font-family: OswaldReg;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+@media (max-width:600px) {
+    ::ng-deep .solutions-services-section button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all {
+        right: 19% !important;
+        bottom: -8% !important;
+    }
+}
+
+@media (max-width:600px) {
+    ::ng-deep .solutions-services-section button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+        bottom: -8% !important;
+    }
+}
+
+::ng-deep .solutions-services-section .hide-arrows button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all, ::ng-deep .solutions-services-section .hide-arrows button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+    display: none;
+}
+
+::ng-deep .solutions-services-section button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all {
+    position: absolute;
+    right: 7.5%;
+    bottom: -14%;
+    box-shadow: 0px 6px 27px #00000080;
+}
+
+::ng-deep .solutions-services-section button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+    position: absolute;
+    right: 5%;
+    bottom: -14%;
+    box-shadow: 0px 6px 27px #00000080;
+}
+
+::ng-deep .solutions-services-section .ui-carousel-prev, ::ng-deep .solutions-services-section .ui-carousel-next {
+    width: 2em;
+    height: 2em;
+    color: grey !important;
+}
+
+.solutions-services-header {
+    margin-bottom: 3.5%;
+}
+
+.solutions-body, .services-body {
+    margin-left: -3%;
+}
+
+.solutions-body>.col-12, .services-body>.col-12 {
+    padding-right: 0px;
+}
+
+.col-12 .sol {
+    min-height: 490px;
+}
+
+.solutions-card {
+    position: absolute;
+    top: 3%;
+    background-color: #010E26;
+    padding: 7%;
+    border-radius: 8px;
+    min-height: 400px;
+    transition: all .1s ease;
+    overflow: hidden;
+}
+
+.solutions-card:hover {
+    transform: translateY(-3%);
+    padding-top: 9.7%;
+    padding-bottom: 10%;
+    cursor: pointer;
+}
+
+.solutions-card:hover .solution-card-title-type::after {
+    width: 60%;
+}
+
+.solution-card-title-type {
+    font-family: OswaldBold;
+    font-size: 220%;
+    letter-spacing: 1.2px;
+}
+
+.solution-card-title {
+    font-family: OswaldLight;
+    margin-top: 5%;
+}
+
+.solution-card-text {
+    color: #AEAEAE;
+    font-family: OswaldReg;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    line-height: 23px;
+    height: 44px;
+    overflow: hidden;
+}
+
+.req-title {
+    font-family: MyriadReg;
+    margin: 0px;
+}
+
+.sol-serv-title {
+    font-family: OswaldBold;
+}
+
+.projects-view-all {
+    font-family: OswaldReg;
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    text-align: right;
+    margin-top: 3%;
+    padding-right: 5%;
+    transition: all .5s ease;
+}
+
+.projects-view-all:after {
+    content: '❯';
+    /* content: '>'; */
+    color: #FFFFFF;
+    position: relative;
+    left: 0px;
+    transition: all .5s ease;
+}
+
+.projects-view-all:hover {
+    cursor: pointer;
+    font-family: OswaldBold;
+    left: 3px;
+}
+
+.projects-view-all:hover:after {
+    left: 10px;
+}
+
+.solutions-services-title {
+    opacity: 0.2;
+    padding-bottom: 1%;
+}
+
+.solutions-services-title.active:hover {
+    cursor: pointer;
+}
+
+.solutions-services-title:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.solutions-services-title.active {
+    opacity: 1;
+}
+
+.solutions-services-title.active::after {
+    display: block;
+    content: '';
+    width: 19%;
+    height: 5px;
+    background: #FF1C4C;
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    transition: all .5s ease;
+}
+
+.solution-card-title-type::after {
+    display: block;
+    content: '';
+    width: 10%;
+    height: 5px;
+    background: #FF1C4C;
+    position: absolute;
+    transition: all .7s ease;
+}
+
+.solutions-services-title.active:hover:after {
+    width: 60%;
+}
+
+
+.solution-industries-container {
+    margin: 7% 0%;
+}
+
+.solution-customers-container {
+    margin-bottom: 7%;
+}
+
+.solution-industries {
+    font-size: 13px;
+    color: #878787;
+    font-family: MyriadReg;
+}
+
+.solution-img-avatar {
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin-right: 3%;
+    opacity: 0.55;
+    mix-blend-mode: luminosity;
+}
+
+.solution-img-avatar:hover {
+    opacity: 1;
+}
+
+.customer-img-avatar {
+    margin-right: 5%;
+    float: left;
+}
+
+.customer-img-avatar img {
+    max-width: 60px;
+    height: 30px;
+}
+
+.solution-industries-imgs {
+    margin-top: 3%;
+}

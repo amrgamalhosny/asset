@@ -7,7 +7,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-
+import {CarouselModule} from 'primeng/carousel';
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { CoreModule } from './core/core.module';
     CoreModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
