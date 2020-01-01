@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "name": "Project 1",
+        "date": "25 May 2019",
+        "desc": "SAP ERP consolidates internal and external elements into a single, living structure that goes beyond traditional ERP software. In other words, it connects all your processes, provides you with live information and insights, and seamlessly integrates your enterprise with the digital world at large.",
+        "country": "Egypt",
+        "about": "Vodafone Group Plc and Telefonica SA’s U.K. carrier O2 have agreed on how to roll out the next-generation 5G wireless technology via their shared British mast company, moving a step closer to a potential sale of the venture.",
+        "uxDesign": "img2",
+        "uxDesc": "Vodafone Group Plc and Telefonica SA’s U.K. carrier O2 have agreed on how to roll out the next-generation 5G wireless technology via their shared British mast company, moving a step closer to a potential sale of the venture.",
+        "showOnHomePage": true,
+        "company": {
+            "id": 1,
+            "name": "Vodafone",
+            "desc": "telecom company", 
+            "img": "path"
+        },
+        "user": {
+            "id": 1,
+            "firstName": "Ahmed",
+            "lastName": "Mohamed",
+            "position": "Project Manager"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Project 2",
+        "date": "25 June 2019",
+        "desc": "SAP ERP consolidates internal and external elements into a single, living structure that goes beyond traditional ERP software. In other words, it connects all your processes, provides you with live information and insights, and seamlessly integrates your enterprise with the digital world at large.",
+        "country": "Egypt",
+        "about": "this is about project",
+        "uxDesign": "img2",
+        "uxDesc": "this is ux desc",
+        "showOnHomePage": true,
+        "company": {
+            "id": 1,
+            "name": "Vodafone",
+            "desc": "telecom company", 
+            "img": "path"
+        },
+        "user": {
+            "id": 2,
+            "firstName": "Belal",
+            "lastName": "Gaber",
+            "position": "Account Manager"
+        }
+    }
+]

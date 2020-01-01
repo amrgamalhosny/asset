@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="498.984" height="68.084" viewBox="0 0 498.984 68.084">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.75" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1d1d1f"/>
+      <stop offset="0.205" stop-color="#1d1d1f"/>
+      <stop offset="1" stop-color="#0c0d0f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#256bb3"/>
+      <stop offset="0.651" stop-color="#0c1222"/>
+      <stop offset="1" stop-color="#0b1b32"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-805.899 -605)">
+    <path id="Subtraction_1" data-name="Subtraction 1" d="M-2248.414,278.084h-372.172a51.156,51.156,0,0,1-20.041-4.047A51.32,51.32,0,0,1-2656.993,263a51.326,51.326,0,0,1-11.034-16.369,51.183,51.183,0,0,1-4.046-20.045v-4.46a12.1,12.1,0,0,0-3.523-8.555,11.891,11.891,0,0,0-8.5-3.571h498.984a11.918,11.918,0,0,0-8.287,3.572,12.1,12.1,0,0,0-3.523,8.556v4.46a51.183,51.183,0,0,1-4.046,20.045A51.326,51.326,0,0,1-2212.007,263a51.317,51.317,0,0,1-16.366,11.036A51.16,51.16,0,0,1-2248.414,278.084Z" transform="translate(3490 395)"/>
+    <g id="mic_cam" data-name="mic + cam" transform="translate(-1645 -819)">
+      <circle id="shape" cx="15" cy="15" r="15" transform="translate(2790 1429)" fill="url(#radial-gradient)"/>
+      <g id="shape-2" data-name="shape" transform="translate(2795.99 1434.98)" stroke="#707070" stroke-linejoin="round" stroke-width="1" fill="url(#radial-gradient-2)">
+        <circle cx="9.01" cy="9.01" r="9.01" stroke="none"/>
+        <circle cx="9.01" cy="9.01" r="8.51" fill="none"/>
+      </g>
+      <path id="shape-3" data-name="shape" d="M2752,1453H2650a9.026,9.026,0,0,1-9-9h0a9.026,9.026,0,0,1,9-9h102a9.027,9.027,0,0,1,9,9h0A9.027,9.027,0,0,1,2752,1453Z" fill="#4f4f4f" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+      <path id="shape-4" data-name="shape" d="M2806.956,1447c-.456,0-1.427-.042-1.5-1.721s-.343-5.9.328-6.541,3.072-1.069,4.207.112a6.964,6.964,0,0,1,1.7,6.943,1.67,1.67,0,0,1-1.616,1.207Zm-8.417-.558a6.959,6.959,0,0,1,2.411-8.388.944.944,0,0,1,.92.179,1.336,1.336,0,0,1,.265,1.579,18.313,18.313,0,0,0-.942,5.881,1.029,1.029,0,0,1-.8,1.094,3.2,3.2,0,0,1-.808.105C2799.126,1446.89,2798.673,1446.779,2798.539,1446.44Z" fill="rgba(60,125,181,0.25)"/>
+    </g>
+  </g>
+</svg>

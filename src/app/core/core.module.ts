@@ -12,9 +12,11 @@ import { NewsComponent } from './home/news/news.component';
 import { CustomersComponent } from './home/customers/customers.component';
 import { SolutionsComponent } from './home/solutions/solutions.component';
 import { CarouselModule } from 'primeng/carousel';
+import { FooterComponent } from './home/footer/footer.component';
 
 @NgModule({
-  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, NavbarComponent, LatestProjectsComponent, NewsComponent, CustomersComponent, SolutionsComponent],
+  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, NavbarComponent, LatestProjectsComponent, 
+    NewsComponent, CustomersComponent, SolutionsComponent, FooterComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -22,7 +24,7 @@ import { CarouselModule } from 'primeng/carousel';
     CarouselModule
   ],
   exports : [
-    BannerComponent, LatestProjectsComponent, NewsComponent, CustomersComponent, SolutionsComponent
+    BannerComponent, LatestProjectsComponent, NewsComponent, CustomersComponent, SolutionsComponent, FooterComponent
   ]
 })
 export class CoreModule { }

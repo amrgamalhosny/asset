@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Vodafone",
+        "desc": "telecom company", 
+        "img": "path"
+    },
+    {
+        "id": 2,
+        "name": "Etisalat", 
+        "desc": "telecom company",
+        "img": "path"
+    }
+]
