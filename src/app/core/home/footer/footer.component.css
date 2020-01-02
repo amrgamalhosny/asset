@@ -1,0 +1,30 @@
+.footer-section {
+    font-family: OswaldReg;
+    font-size: 14px;
+    padding: 3% 5% 3% 5%;
+    border-top: 2px solid #FF1C4C;
+}
+
+.footer-section .row{
+    margin-right: 0px;
+}
+.followus-icons img{
+    margin-right: 15%;
+}
+
+.followus-title{
+    margin-bottom: 5%;
+}
+
+.followus-icons img:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.copyright-logo{
+    margin-bottom: 2%;
+}
+
+.followus{
+    margin-top: 1.5%;
+}

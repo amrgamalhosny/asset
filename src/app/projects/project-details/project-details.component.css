@@ -1,0 +1,445 @@
+.banner {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.17) 0%, rgba(0, 0, 0, 0.65) 100%) 0% 0% no-repeat padding-box, url('../../../assets/images/Clip1.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  color: white;
+  font-family: OswaldReg;
+}
+
+.project-country {
+  background-color: #A3A3A3;
+  color: #FFFFFF;
+  margin-right: 10px;
+  font-size: 12px;
+  text-align: center;
+  min-width: 70px;
+  max-width: 100px;
+  overflow: hidden;
+  float: left;
+  margin-top: 2px;
+}
+
+.solution-img-avatar {
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  margin-right: 3%;
+  opacity: 0.8;
+  mix-blend-mode: luminosity;
+}
+
+.project-type-title {
+  margin-top: 1.5%;
+}
+
+.project-date {
+  font-family: OswaldReg;
+  font-size: 16px;
+}
+
+.project-details-row {
+  padding: 23% 5%;
+  margin: 0%;
+}
+
+/* .project-details-banner{
+  padding-top: 2%;
+} */
+
+.project-details-title {
+  font-family: OswaldBold;
+  font-size: 65px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin-bottom: 8%;
+  line-height: 75px;
+}
+
+.project-details-card-row {
+  padding-top: 4%;
+  padding-left: 6%;
+}
+
+.project-details-card-title {
+  margin-top: 12%;
+  font-size: 14px;
+  opacity: 0.4;
+}
+
+.project-details-card-img {
+  opacity: 1;
+}
+
+.project-details-card {
+  text-align: center;
+  margin-top: 30%;
+  padding: 8% 3%;
+  background: rgba(0, 0, 0, 0) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 27px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  min-width: 160px;
+  min-height: 145px;
+}
+
+.project-about-section {
+  padding: 5%;
+}
+
+.project-about-desc {
+  color: #737373;
+  font-size: 19px;
+  font-family: OswaldReg;
+  letter-spacing: 0;
+  line-height: 35px;
+  margin-top: 2%;
+}
+
+.test-img1 {
+  background-image: url('../../../assets/images/iPhoneX.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: initial;
+  left: 35%;
+  top: 0%;
+  text-align: center;
+  width: 30vw;
+  height: 49vw;
+  padding-top: 1vw;
+  padding-right: 5.5vw;
+  padding-left: 4.3vw;
+  position: relative;
+  margin: 7% 0%;
+}
+
+.screen0 {
+  width: 14vw;
+  top: 2%;
+  left: 25%;
+  position: absolute;
+  z-index: 2;
+}
+
+.screen1 {
+  height: 44.2vw;
+  overflow-y: auto;
+  border-radius: 2.5vw 2.5vw 2.2vw 2.2vw;
+}
+
+.screen1:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+
+}
+::ng-deep .drag-scroll-content::-webkit-scrollbar-track{
+  border-radius: 10px;
+  background: transparent;
+}
+
+::ng-deep .drag-scroll-content::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+::ng-deep .drag-scroll-content::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 25px;
+}
+
+::ng-deep .drag-scroll-content::-webkit-scrollbar {
+  width: 1px;
+}
+
+.screen1::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+
+.screen1::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+.screen1::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 25px;
+}
+
+.screen1::-webkit-scrollbar {
+  width: 4px;
+}
+
+.screen1::-webkit-scrollbar-thumb {
+  background-color: #F9F9F9;
+  border-radius: 10px;
+}
+
+.test-img2 {
+  background-image: url('../../../assets/images/MacBookSVG.SVG');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: initial;
+  left: 6%;
+  top: 0%;
+  text-align: center;
+  width: 85vw;
+  height: 49vw;
+  padding-top: 3.2vw;
+  padding-right: 10.6vw;
+  padding-left: 10.6vw;
+  position: relative;
+  margin: 7% 0%;
+}
+
+.screen2 {
+  height: 40.5vw;
+  overflow-y: scroll;
+}
+
+.screen2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.screen2::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.screen2::-webkit-scrollbar-thumb {
+  background-color:#878787;
+}
+
+.project-design-section {
+  background-color: #F7F7F8;
+  text-align: center;
+  padding-top: 5%;
+  font-family: OswaldReg;
+}
+
+.project-design-desc {
+  color: #737373;
+  font-size: 19px;
+  font-family: OswaldReg;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 35px;
+  margin: 3% 10%;
+}
+
+.project-design-thanks, .project-design-title {
+  font-size: 50px;
+  font-family: OswaldBold;
+  color: #000000;
+  letter-spacing: 3.5px;
+}
+
+.project-design-thanks {
+  margin-bottom: 10%;
+}
+
+/* Latest Projects Begin */
+
+.latest-projects-section {
+  background-color: #111111;
+  color: #FFFFFF;
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 9%;
+  font-family: OswaldReg;
+  overflow-x: hidden;
+  text-align: left;
+}
+
+.latest-projects-body>.col-12 {
+  padding-right: 0px;
+}
+
+.latest-projects-body {
+  margin-left: -3%;
+}
+
+.latest-title {
+  font-family: MyriadReg;
+  margin: 0px;
+}
+
+.projects-title {
+  font-family: OswaldBold;
+}
+
+.projects-view-all {
+  font-family: OswaldReg;
+  color: #525252;
+  font-size: 14px;
+  margin-top: 3%;
+  letter-spacing: 1.4px;
+  text-align: right;
+  padding-right: 5%;
+  transition: all .5s ease;
+}
+
+.projects-view-all:after {
+  content: '❯';
+  color: #E60000;
+  position: relative;
+  transition: all .5s ease;
+  left: 0px;
+}
+
+.project-design-section .projects-view-all:hover {
+  cursor: pointer;
+  color: #525252;
+  font-family: OswaldBold;
+  left: 3px;
+}
+
+.projects-view-all:hover:after {
+  left: 10px;
+}
+
+.latest-projects-header {
+  margin-bottom: 3.5%;
+}
+
+::ng-deep .ui-carousel-dots-container {
+  display: none;
+}
+
+.pro {
+  min-height: 450px;
+  width: 98%;
+}
+
+.project-card {
+  position: absolute;
+  top: 3%;
+  padding: 7%;
+  box-shadow: 5px 9px 16px #00000026;
+  border-radius: 8px;
+  min-height: 375px;
+  transition: all .1s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-3%);
+  padding-top: 9.7%;
+  padding-bottom: 10%;
+  cursor: pointer;
+}
+
+.project-card:hover .project-hr {
+  width: 60%;
+}
+
+.project-country {
+  background-color: #000000;
+  color: #FFFFFF;
+  margin-right: 10px;
+  font-size: 12px;
+  text-align: center;
+  min-width: 70px;
+  max-width: 100px;
+  overflow: hidden;
+  float: left;
+  margin-top: 2px;
+}
+
+.project-date {
+  font-family: OswaldReg;
+  font-size: 16px;
+}
+
+.project-card-title {
+  font-family: OswaldBold;
+  margin-top: -4%;
+  color: #0F0F0F;
+}
+
+@media (max-width:600px) {
+  .project-card-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width:600px) {
+  ::ng-deep .latest-projects-section button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all {
+    right: 19% !important;
+    bottom: -8% !important;
+  }
+}
+
+@media (max-width:600px) {
+  ::ng-deep .latest-projects-section button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+    bottom: -8% !important;
+  }
+}
+
+::ng-deep .latest-projects-section .hide-arrows button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all, ::ng-deep .latest-projects-section .hide-arrows button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+  display: none;
+}
+
+::ng-deep .latest-projects-section button.ui-carousel-prev.ui-button.ui-widget.ui-state-default.ui-corner-all {
+  position: absolute;
+  right: 7.5%;
+  bottom: -14%;
+  box-shadow: 0px 6px 27px #00000080;
+}
+
+::ng-deep .latest-projects-section button.ui-carousel-next.ui-button.ui-widget.ui-state-default.ui-corner-all {
+  position: absolute;
+  right: 5%;
+  bottom: -14%;
+  box-shadow: 0px 6px 27px #00000080;
+}
+
+::ng-deep .latest-projects-section .ui-carousel-prev, ::ng-deep .latest-projects-section .ui-carousel-next {
+  width: 2em;
+  height: 2em;
+  color: grey !important;
+}
+
+.project-hr {
+  background-color: #FF1C4C;
+  height: 3px;
+  width: 10%;
+  transition: all .5s ease;
+}
+
+.project-card-text {
+  color: #737373;
+  font-family: OswaldReg;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  line-height: 23px;
+  max-height: 70px;
+  min-height: 70px;
+  overflow: hidden;
+}
+
+.project-img-avatar {
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 65px;
+  height: 65px;
+}
+
+.latest-projects-emp-name {
+  font-family: OswaldMed;
+  color: #444444;
+  font-size: 16px;
+  margin-top: 3%;
+}
+
+.project-emp-title {
+  overflow: hidden;
+  color: #444444;
+  max-height: 20px;
+}
+
+/* Latest Projects End */

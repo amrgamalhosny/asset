@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import {CarouselModule} from 'primeng/carousel';
+import { ProjectsModule } from './projects/projects.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {CarouselModule} from 'primeng/carousel';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    CarouselModule
+    CarouselModule, 
+    ProjectsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

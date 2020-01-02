@@ -1,1 +1,159 @@
-<p>project-details works!</p>
+<div class="banner">
+    <div class="row project-details-row">
+        <div class="col-md-6">
+            <div class="project-details-banner">
+                <div class="row">
+                    <p class="project-country">
+                        {{project.country}}
+                    </p>
+                    <span class="project-date">
+                        {{project.date}}
+                    </span>
+                </div>
+
+                <h1 class=" row project-details-title">Vodafone Campaign Tool</h1>
+
+                <div class="row">
+                    <img class="solution-img-avatar" src="../../../assets/images/telecommunication copy.png">
+                    <span class="project-type-title">
+                        Telecommunication
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 offset-md-3 project-details-card-row">
+            <div class="project-details-card">
+                <img class="project-details-card-img" src="../../../assets/images/vodafoneprojectdetails.svg">
+                <h6 class="project-details-card-title"> Vodafone Group </h6>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="project-about-section">
+    <h1 class="project-design-title">ABOUT PROJECT</h1>
+    <p class="project-about-desc">
+        {{project.about}}
+    </p>
+</div>
+
+<div class="project-design-section">
+    <h2 class="project-design-title">
+        UX DESIGN
+    </h2>
+
+    <p class="project-design-desc">
+        {{project.uxDesc}}
+    </p>
+
+    <div class="test-img2">
+        <div class="screen2">
+            <img src="../../../assets/images/Asset.jpg" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="test-img2">
+        <div class="screen2">
+            <img src="../../../assets/images/Asset.jpg" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="test-img1">
+        <img class="screen0" src="../../../assets/images/IPhoneXPart.svg">
+
+        <!-- <div class="screen1">
+            <img src="../../../assets/images/Asset.jpg" class="img-fluid">
+        </div> -->
+        <!-- 
+         [drag-scroll-disabled]="disabled"
+            [drag-scroll-x-disabled]="xDisabled" [drag-scroll-y-disabled]="yDisabled" -->
+        <drag-scroll class="screen1" [scrollbar-hidden]="hideScrollbar">
+            <img drag-scroll-item src="../../../assets/images/Asset.jpg" class="img-fluid" />
+        </drag-scroll>
+
+    </div>
+
+    <h1 class="project-design-thanks">THANKS</h1>
+
+    <div class="latest-projects-section">
+        <div>
+            <div class="row latest-projects-header">
+                <div class="col-10  latest-projects-title">
+                    <h2 class="latest-title">OTHER</h2>
+                    <h1 class="projects-title">PROJECTS</h1>
+                </div>
+                <div class="col-2 projects-view-all">
+                    VIEW ALL
+                </div>
+            </div>
+
+            <div class="row latest-projects-body">
+                <div [className]="projects.length>2 ? 'col-12' : 'col-9 hide-arrows'">
+                    <p-carousel [value]="projects" [numVisible]="2.5" [numScroll]="1">
+                        <ng-template let-otherProject pTemplate="item">
+                            <div class="col-12 pro">
+                                <div class="card project-card">
+                                    <div class="card-body">
+
+                                        <div class="d-flex justify-content-between">
+                                            <div class="project-details">
+                                                <p class="project-country">
+                                                    {{otherProject.country}}
+                                                </p>
+                                                <span class="project-date">
+                                                    {{otherProject.date}}
+                                                </span>
+                                            </div>
+
+                                            <div>
+                                                <img src="../../../../assets/images/project.png" class="img-fluid">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-12 col-xs-12">
+                                                <h2 class="project-card-title">{{otherProject.name}} </h2>
+                                            </div>
+                                        </div>
+
+                                        <hr class="project-hr" align="left">
+                                        <p class="project-card-text">
+                                            {{otherProject.desc}}
+                                        </p>
+
+                                        <div class="row ">
+                                            <div class=" col-3">
+                                                <img src="../../../../assets/images/3.jpg" class="project-img-avatar">
+                                            </div>
+                                            <div class=" col-9">
+                                                <div class="row latest-projects-emp-name">
+                                                    <div class="col-sm-12">
+                                                        {{otherProject.user.firstName}}
+                                                        {{otherProject.user.lastName}}
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 project-emp-title">
+                                                       {{otherProject.user.position}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="738.123" height="418.838" viewBox="0 0 738.123 418.838">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#151515"/>
+      <stop offset="1" stop-color="#2c2c2c"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#848484"/>
+      <stop offset="1" stop-color="#2a2b2d"/>
+    </linearGradient>
+    <filter id="lower_bottom" x="0" y="399.621" width="738.123" height="19.217" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="1" y1="0.5" x2="0" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#808185"/>
+      <stop offset="0.002" stop-color="#cfd0d4"/>
+      <stop offset="0.008" stop-color="#cfd0d2"/>
+      <stop offset="0.021" stop-color="#949599"/>
+      <stop offset="0.037" stop-color="#a7a8ac"/>
+      <stop offset="0.042" stop-color="#b6b7bb"/>
+      <stop offset="0.096" stop-color="#d8d8d8"/>
+      <stop offset="0.909" stop-color="#dddee0"/>
+      <stop offset="0.956" stop-color="#b1b2b4"/>
+      <stop offset="0.983" stop-color="#c2c3c7"/>
+      <stop offset="0.991" stop-color="#f1f3f2"/>
+      <stop offset="0.994" stop-color="#e9ebea"/>
+      <stop offset="0.997" stop-color="#d4d5d7"/>
+      <stop offset="1" stop-color="#7a7b7f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="1" y1="0.372" x2="0" y2="0.372" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#949599"/>
+      <stop offset="0.036" stop-color="#9e9fa3"/>
+      <stop offset="0.052" stop-color="#b9babc"/>
+      <stop offset="0.086" stop-color="#e0e1e3"/>
+      <stop offset="0.918" stop-color="#d8d9db"/>
+      <stop offset="0.945" stop-color="#c2c3c5"/>
+      <stop offset="1" stop-color="#8d8e90"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_4" data-name="Group 4" transform="translate(-387.595 -415)">
+    <g id="Group_3" data-name="Group 3" transform="translate(757 625)">
+      <g id="Group_2" data-name="Group 2">
+        <g id="Group_1" data-name="Group 1">
+          <g id="macbook_pro_retina" data-name="macbook pro retina" transform="translate(-364 -210)">
+            <g id="monitor" transform="translate(67)">
+              <path id="screen_border" data-name="screen border" d="M23,0H570a23,23,0,0,1,23,23V396a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V23A23,23,0,0,1,23,0Z" transform="translate(0 1)" fill="#121212"/>
+              <g id="monitor-2" data-name="monitor" fill="none" stroke="#c5c5c5" stroke-miterlimit="10" stroke-width="2">
+                <path d="M23,0H570a23,23,0,0,1,23,23V404a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V23A23,23,0,0,1,23,0Z" stroke="none"/>
+                <path d="M23,1H570a22,22,0,0,1,22,22V402a1,1,0,0,1-1,1H2a1,1,0,0,1-1-1V23A22,22,0,0,1,23,1Z" fill="none"/>
+              </g>
+              <rect id="screen" width="556" height="348" transform="translate(19 26)"/>
+            </g>
+            <g id="camera" transform="translate(360 12)">
+              <circle id="Oval_5" data-name="Oval 5" cx="4" cy="4" r="4" fill="url(#linear-gradient)"/>
+              <circle id="Oval_6" data-name="Oval 6" cx="2" cy="2" r="2" transform="translate(2 2)" fill="#103470"/>
+            </g>
+            <g id="bottom" transform="translate(0 397)">
+              <g transform="matrix(1, 0, 0, 1, -5.4, -397)" filter="url(#lower_bottom)">
+                <path id="lower_bottom-2" data-name="lower bottom" d="M0,0S7.576,5.709,29.032,7.217H696.776s17.8-1.01,29.348-6.968H16.825Z" transform="translate(6 403.62)" fill="url(#linear-gradient-2)"/>
+              </g>
+              <rect id="upper_bottom" data-name="upper bottom" width="726" height="7" transform="translate(1)" fill="url(#linear-gradient-3)"/>
+              <path id="indent" d="M0,0S.082,3.056,5.879,4.516H96.025s4.959-.95,6.063-4.516H1.461" transform="translate(312.427)" fill="url(#linear-gradient-4)"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
