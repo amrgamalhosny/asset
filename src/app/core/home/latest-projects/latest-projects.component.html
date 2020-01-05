@@ -1,78 +1,78 @@
 <div class="latest-projects-section">
     <div>
-      <div class="row latest-projects-header">
-        <div class="col-10  latest-projects-title">
-          <h2 class="latest-title">LATEST</h2>
-          <h1 class="projects-title">PROJECTS</h1>
+        <div class="row latest-projects-header">
+            <div class="col-10  latest-projects-title">
+                <h2 class="latest-title">LATEST</h2>
+                <h1 class="projects-title">PROJECTS</h1>
+            </div>
+            <div class="col-2 projects-view-all">
+                VIEW ALL
+            </div>
         </div>
-        <div class="col-2 projects-view-all">
-          VIEW ALL
-        </div>
-      </div>
-  
-      <div class="row latest-projects-body">
-        <div [className]="projects.length>2 ? 'col-12' : 'col-9 hide-arrows'">
-          <p-carousel [value]="projects" [numVisible]="2.5" [numScroll]="1">
-            <ng-template let-project pTemplate="item">
-              <div class="col-12 pro">
-                <div class="card project-card" (click)="goToDetails(project)">
-                  <div class="card-body">
-  
-                    <div class="d-flex justify-content-between">
-                      <div class="project-details">
-                        <p class="project-country">
-                          {{project.country}}
-                        </p>
-                        <span class="project-date">
+
+        <div class="row latest-projects-body">
+            <div [className]="projects.length > 2 ? 'col-12' : 'col-9 hide-arrows'">
+                <p-carousel [value]="projects" [numVisible]="2.5" [numScroll]="1">
+                    <ng-template let-project pTemplate="item">
+                        <div class="col-12 pro">
+                            <div class="card project-card" (click)="goToDetails(project)">
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between">
+                                        <div class="project-details">
+                                            <p class="project-country">
+                                                {{project.country}}
+                                            </p>
+                                            <span class="project-date">
                           {{project.date}}
                         </span>
-                      </div>
-  
-                      <div>
-                        <img src="../../../../assets/images/project.png" class="img-fluid">
-                      </div>
-                    </div>
-  
-                    <div class="row">
-                      <div class="col-sm-12 col-xs-12">
-                        <h2 class="project-card-title"> {{project.name}} </h2>
-                      </div>
-                    </div>
-  
-                    <hr class="project-hr" align="left">
-                    <p class="project-card-text">
-                      {{project.desc}}
-                    </p>
-  
-                    <div class="row ">
-                      <div class=" col-3">
-                        <img src="../../../../assets/images/3.jpg" class="project-img-avatar">
-                      </div>
-                      <div class=" col-9">
-                        <div class="row latest-projects-emp-name">
-                          <div class="col-sm-12">
-                            {{project.user.firstName}} {{project.user.lastName}}
-                          </div>
+                                        </div>
+
+                                        <div>
+                                            <img src="../../../../assets/images/project.png" class="img-fluid">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xs-12">
+                                            <h2 class="project-card-title"> {{project.name}} </h2>
+                                        </div>
+                                    </div>
+
+                                    <hr class="project-hr" align="left">
+                                    <p class="project-card-text">
+                                        {{project.desc}}
+                                    </p>
+
+                                    <div class="row ">
+                                        <div class=" col-3">
+                                            <img src="../../../../assets/images/3.jpg" class="project-img-avatar">
+                                        </div>
+                                        <div class=" col-9">
+                                            <div class="row latest-projects-emp-name">
+                                                <div class="col-sm-12">
+                                                    {{project.user.firstName}} {{project.user.lastName}}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 project-emp-title">
+                                                    {{project.user.position}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
                         </div>
-                        <div class="row">
-                          <div class="col-sm-12 project-emp-title">
-                            {{project.user.position}}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-  
-  
-                  </div>
-                </div>
-              </div>
-            </ng-template>
-          </p-carousel>
-  
+                    </ng-template>
+                </p-carousel>
+
+            </div>
+
+
         </div>
-  
-  
-      </div>
-  
+
     </div>
-  </div>
+</div>

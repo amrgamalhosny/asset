@@ -20,13 +20,14 @@ import { FooterComponent } from './home/footer/footer.component';
 
 @NgModule({
 
-  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, NavbarComponent, LatestProjectsComponent, 
+  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, LatestProjectsComponent, 
     NewsComponent, CustomersComponent, SolutionsComponent, FooterComponent],
   imports: [
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    CarouselModule
   ],
   exports : [
     BannerComponent,CarouselModule, LatestProjectsComponent, NewsComponent, CustomersComponent, SolutionsComponent, FooterComponent

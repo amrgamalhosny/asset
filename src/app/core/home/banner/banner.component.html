@@ -22,9 +22,7 @@
                 </small>
             </div>
             <div class="col-12">
-                <input [@focusInOut]="isFocus ? 'focusOn' : 'focusOut'" type="search" class="bannerSearch"
-                    placeholder="Search..." [(ngModel)]="query" name="search" (focus)="showResultsFn()"
-                    (focusout)="hideResultsFn()">
+                <input [@focusInOut]="isFocus ? 'focusOn' : 'focusOut'" type="search" class="bannerSearch" placeholder="Search..." [(ngModel)]="query" name="search" (focus)="showResultsFn()" (focusout)="hideResultsFn()">
                 <button class="bannerIcon" [@focusInOut]="isFocus ? 'btnOn' : 'btnOut'">
                     <img src="../../../../assets/images/search.svg">
                 </button>
@@ -61,8 +59,7 @@
                     </div>
                 </div>
                 <!-- End Row -->
-                <div class="title"
-                    [hidden]="!((testOne | bannerSearch:query).length === 0 && (testTwo | bannerSearch:query).length === 0 && (testThree | bannerSearch:query).length === 0)">
+                <div class="title" [hidden]="!((testOne | bannerSearch:query).length === 0 && (testTwo | bannerSearch:query).length === 0 && (testThree | bannerSearch:query).length === 0)">
                     No Data Found.
                 </div>
                 <!-- End Row -->
@@ -84,9 +81,7 @@
                 </small>
             </div>
             <div class="col-12">
-                <input  class="bannerSearch"
-                    placeholder="Search..." [(ngModel)]="query" name="search" (focus)="showResultsFn()"
-                    (focusout)="hideResultsFn()">
+                <input class="bannerSearch" placeholder="Search..." [(ngModel)]="query" name="search" (focus)="showResultsFn()" (focusout)="hideResultsFn()">
                 <button class="bannerIcon">
                     <img src="../../../../assets/images/search.svg">
                 </button>
@@ -123,8 +118,7 @@
                     </div>
                 </div>
                 <!-- End Row -->
-                <div class="title"
-                    [hidden]="!((testOne | bannerSearch:query).length === 0 && (testTwo | bannerSearch:query).length === 0 && (testThree | bannerSearch:query).length === 0)">
+                <div class="title" [hidden]="!((testOne | bannerSearch:query).length === 0 && (testTwo | bannerSearch:query).length === 0 && (testThree | bannerSearch:query).length === 0)">
                     No Data Found.
                 </div>
                 <!-- End Row -->
