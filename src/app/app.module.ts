@@ -9,10 +9,12 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import {CarouselModule} from 'primeng/carousel';
 import { ProjectsModule } from './projects/projects.module';
+import { AdminModule } from './admin/admin.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { ProjectsModule } from './projects/projects.module';
     FormsModule,
     ReactiveFormsModule,
     CarouselModule, 
-    ProjectsModule
+    ProjectsModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

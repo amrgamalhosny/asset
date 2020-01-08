@@ -1,0 +1,194 @@
+.mockup-section {
+    background-color: #F7F7F8;
+    font-family: OswaldReg;
+}
+
+.add-mockup-title {
+    font-family: OswaldReg;
+    font-size: 30px;
+    text-align: center;
+}
+
+.add-mockup-title-bold {
+    font-family: OswaldBold;
+}
+
+.mockup-devices {
+    text-align: center;
+}
+
+.mockup-device {
+    background-color: #FFFFFF;
+    margin: 1%;
+    padding: 3%;
+}
+
+.mockup-device:hover {
+    cursor: pointer;
+    background-color: #E3E3E3;
+}
+
+::ng-deep p-button.ng-star-inserted {
+    display: none;
+}
+
+.mockup-screen {
+    padding: 5%;
+    height: 27vw;
+    margin-left: 15%;
+}
+
+.laptop-mockup {
+    background-image: url('../../../../assets/images/MacBookSVG.SVG');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: initial;
+    text-align: center;
+    float: left;
+    margin-right: 5%;
+    height: 20vw;
+    padding-top: 1.25vw;
+    padding-right: 4.25vw;
+    padding-left: 4.25vw;
+    position: relative;
+    width: 33vw;
+}
+
+.laptop-screen {
+    height: 15.5vw;
+    overflow-y: auto;
+}
+
+.laptop-screen::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.laptop-screen::-webkit-scrollbar {
+    width: 1.5%;
+    background-color: #F5F5F5;
+}
+
+.laptop-screen::-webkit-scrollbar-thumb {
+    background-color: #878787;
+}
+
+.mobile-mockup-screen {
+    padding: 5%;
+    height: 32vw;
+    margin-left: 17%;
+}
+
+.mobile-mockup {
+    background-image: url('../../../../assets/images/iPhoneX.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: initial;
+    text-align: center;
+    float: left;
+    margin-right: 5%;
+    height: 25vw;
+    padding-top: 0.65vw;
+    padding-right: 3vw;
+    padding-left: 2.3vw;
+    position: relative;
+    width: 16vw;
+}
+
+::ng-deep .drag-scroll-content::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
+::ng-deep .drag-scroll-content::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 20px;
+}
+
+::ng-deep .drag-scroll-content::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 25px;
+}
+
+::ng-deep .drag-scroll-content::-webkit-scrollbar {
+    width: 1px;
+}
+
+.mobile-screen {
+    height: 23.5vw;
+    overflow-y: auto;
+    border-radius: 1.2vw 1.2vw 1.2vw 1.2vw;
+}
+
+.mobile-screen::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
+.mobile-screen::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 20px;
+}
+
+.mobile-screen::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 25px;
+}
+
+.mobile-screen::-webkit-scrollbar {
+    width: 0px;
+}
+
+.mobile-screen::-webkit-scrollbar-thumb {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+}
+
+.screenX {
+    width: 8vw;
+    top: 2%;
+    left: 23%;
+    position: absolute;
+    z-index: 2;
+}
+
+.mockup-section .laptop-form input[type=text] {
+    width: 20%;
+    padding: 0.6% 1.5%;
+    display: inline-block;
+    border: 1px solid #E3E3E3;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.mockup-section .laptop-form input[type=text]::placeholder {
+    color: #B4B4B4;
+    font-family: OswaldLight;
+}
+
+.mockup-section .laptop-form textarea {
+    resize: none;
+    width: 30%;
+    padding: 0.6% 1.5%;
+    border: 1px solid #E3E3E3;
+    border-radius: 2px;
+}
+
+.mockup-section .laptop-form textarea::placeholder {
+    color: #B4B4B4;
+    font-family: OswaldLight;
+}
+
+.form-label {
+    margin-bottom: 0px;
+}
+
+.form-label-section {
+    margin-bottom: 1%;
+}
+
+.form-remove-button {
+    border-radius: 2px;
+    background-color: #F0F0F0;
+}
