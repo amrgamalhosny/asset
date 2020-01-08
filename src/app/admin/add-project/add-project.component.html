@@ -1,7 +1,36 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 text-center">
-            Create New Project
+        <div class="col-12 text-center heading-30 oswaldReg align-middle  height-145 line-height-145">
+            Create <span class="oswaldBold">New</span> Project
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" multiple="multiple" accept="image/*" maxFileSize="20000000" [showUploadButton]="false" [showCancelButton]="false" [chooseLabel]="'Browse'" class="project-upload">
+
+                    <ng-template pTemplate="content">
+                        <div *ngIf="!uploadedFiles.length">
+                            <div class="container text-center padding-top img-container">
+                                <div class="oswaldMed heading-20">
+                                    Drag and drop an image
+                                </div>
+                                <div class="mt-1">
+                                    or browse to choose a file
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="uploadedFiles.length">
+                            <!-- <div *ngFor="let file of uploadedFiles">
+                                {{file.name}}
+                            </div> -->
+                        </div>
+                        <!-- <ul *ngIf="uploadedFiles.length">
+                            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                        </ul> -->
+                    </ng-template>
+                </p-fileUpload>
+            </div>
         </div>
     </div>
 </div>

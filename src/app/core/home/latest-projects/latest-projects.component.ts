@@ -22,6 +22,7 @@ export class LatestProjectsComponent implements OnInit {
     this.dataService.getAllProjects()
     .subscribe((projects: IProject[])=>{
       this.projects = projects
+      console.log("pro: "+this.projects);
     });
     
   }
