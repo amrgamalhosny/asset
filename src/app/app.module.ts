@@ -7,9 +7,10 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import {CarouselModule} from 'primeng/carousel';
+// import {CarouselModule} from 'primeng/carousel';
 import { ProjectsModule } from './projects/projects.module';
 import { AdminModule } from './admin/admin.module';
+import { CarouselModule } from 'primeng/carousel/carousel';
 
 
 @NgModule({

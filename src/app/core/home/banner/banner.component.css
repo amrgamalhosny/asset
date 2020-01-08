@@ -5,12 +5,15 @@
     background-size: cover;
     height: 100vh; */
     color:#fff;
+    background-color: #000;
+    height: 100vh;
 }
 .banner video{
     position: absolute;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     top: 0;
+    opacity: .7;
 }
 /* Navbar */
 .navbar{

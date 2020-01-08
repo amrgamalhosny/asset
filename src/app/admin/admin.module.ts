@@ -4,7 +4,7 @@ import { AddEditProjectComponent } from './project/add-edit-project/add-edit-pro
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {FileUploadModule} from 'primeng/fileupload';
 import { DragScrollModule } from 'ngx-drag-scroll';
-
+import { AddProjectComponent } from './add-project/add-project.component';
 
 @NgModule({
   declarations: [AddEditProjectComponent],
@@ -16,7 +16,8 @@ import { DragScrollModule } from 'ngx-drag-scroll';
     DragScrollModule
   ],
   exports:[
-    AddEditProjectComponent
+    AddEditProjectComponent,
+    AddProjectComponent
   ]
 })
 export class AdminModule { }

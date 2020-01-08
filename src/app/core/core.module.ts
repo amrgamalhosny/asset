@@ -6,7 +6,11 @@ import { BannerComponent } from './home/banner/banner.component';
 import { FormsModule } from '@angular/forms';
 import { BannerSearchPipe } from '../shared/pipes/banner-search.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './home/navbar/navbar.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchPipe } from '../shared/pipes/search.pipe';
+
+
 import { LatestProjectsComponent } from './home/latest-projects/latest-projects.component';
 import { NewsComponent } from './home/news/news.component';
 import { CustomersComponent } from './home/customers/customers.component';
@@ -15,16 +19,18 @@ import { CarouselModule } from 'primeng/carousel';
 import { FooterComponent } from './home/footer/footer.component';
 
 @NgModule({
-  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, NavbarComponent, LatestProjectsComponent, 
+
+  declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, LatestProjectsComponent, 
     NewsComponent, CustomersComponent, SolutionsComponent, FooterComponent],
   imports: [
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
+    NgbModule,
     CarouselModule
   ],
   exports : [
-    BannerComponent, LatestProjectsComponent, NewsComponent, CustomersComponent, SolutionsComponent, FooterComponent
+    BannerComponent,CarouselModule, LatestProjectsComponent, NewsComponent, CustomersComponent, SolutionsComponent, FooterComponent
   ]
 })
 export class CoreModule { }

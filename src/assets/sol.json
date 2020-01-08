@@ -1,0 +1,14 @@
+ [
+        {
+            "name": "EPM",
+            "full": "EnterprisePerformanceManagement",
+            "desc": "SAP ERP consolidates internal and external elements into a single, living structure that goes beyond traditional ERP software. In other words, it connects all your processes, provides you with live information and insights, and seamlessly integrates your enterprise with the digital world at large.",
+            "country" : "Egypt"
+        },
+        {
+            "name": "EPM",
+            "full": "EnterprisePerformanceManagement",
+            "desc": "SAP ERP consolidates internal and external elements into a single, living structure that goes beyond traditional ERP software. In other words, it connects all your processes, provides you with live information and insights, and seamlessly integrates your enterprise with the digital world at large.",
+            "country" : "Portugal"
+        }
+    ]

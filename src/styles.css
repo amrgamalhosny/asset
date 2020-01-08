@@ -13,6 +13,103 @@ body{
     z-index: 99;
 }
 
+.text-grey{
+    color: #717171;
+}
+
+/* Search Page */
+.resultsCont .nav-tabs .nav-link {
+    color: #9F9F9F;
+    font-size: 18px;
+    font-weight: 600;
+}
+.resultsCont .nav-tabs .nav-link.active{
+    color: #0F0F0F;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #FF1C4C;
+}  
+.resultsCont .nav-link{
+    padding: 0;
+    margin-right: 25px;
+}
+.resultsCont .nav-tabs{
+    border: none;
+}
+.resultsCont  .nav-tabs .nav-link:hover, .resultsCont  .nav-tabs .nav-link:focus {
+    border-bottom: 3px solid #FF1C4C;
+}
+.resultsCont .nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.resultsCont .tab-content{
+    padding: 20px 0;
+}
+/* End Search Page */
+
+/* Custom Checkbox */
+.checkTitle{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+.customCheck {
+    display: flex;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+    .customCheck input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+    .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: solid 1px #707070;
+  }
+    /* .customCheck:hover input ~ .checkmark {
+    background-color: #ccc;
+  } */
+    .customCheck input:checked ~ .checkmark {
+    background-color: #E60000;
+  }
+    .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+    .customCheck input:checked ~ .checkmark:after {
+    display: block;
+  }
+    .customCheck .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  /* End Checkbox */
+
 
 @font-face {
     font-family: MyriadReg;
@@ -38,3 +135,4 @@ body{
     font-family: OswaldLight;
     src: url(assets/fonts/oswald/Oswald-Light.ttf);
 }
+
