@@ -32,8 +32,12 @@
     display: none;
 }
 
+.col-5.mockup-form-screen {
+    margin: auto 0;
+}
+
 .mockup-screen {
-    height: 50vh;
+    height: 38vh;
     padding-left: 22%;
 }
 
@@ -74,7 +78,7 @@
 }
 
 .tablet-mockup-screen {
-    padding-left: 25%;
+    padding-left: 24%;
 }
 
 .tablet-mockup {
@@ -85,16 +89,16 @@
     text-align: center;
     float: left;
     margin-right: 5%;
-    height: 34vh;
-    padding-top: 0.35vw;
-    padding-right: 5.8vw;
-    padding-left: 4.77vw;
+    height: 33vh;
+    padding-top: 0.36vw;
+    padding-right: 6.1vw;
+    padding-left: 5.15vw;
     position: relative;
-    width: 30vw;
+    width: 32vw;
 }
 
 .tablet-screen {
-    height: 28.5vh;
+    height: 30.3vh;
     overflow-y: auto;
     border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
 }
@@ -114,7 +118,7 @@
     margin-right: 5%;
     height: 53vh;
     padding-top: 0.65vw;
-    padding-right: 3vw;
+    padding-right: 2.9...vw;
     padding-left: 2.3vw;
     position: relative;
     width: 16vw;
@@ -177,7 +181,7 @@
     z-index: 2;
 }
 
-.mockup-section .laptop-form input[type=text] {
+.mockup-section .laptop-form input[type=text], .mockup-section .mobile-form input[type=text],  .mockup-section .tablet-form input[type=text]  {
     width: 35%;
     padding: 0.6% 1.5%;
     display: inline-block;
@@ -186,12 +190,12 @@
     box-sizing: border-box;
 }
 
-.mockup-section .laptop-form input[type=text]::placeholder, .mockup-section .mobile-form input[type=text]::placeholder {
+.mockup-section .laptop-form input[type=text]::placeholder, .mockup-section .mobile-form input[type=text]::placeholder, .mockup-section .tablet-form input[type=text]::placeholder {
     color: #B4B4B4;
     font-family: OswaldLight;
 }
 
-.mockup-section .laptop-form textarea {
+.mockup-section .laptop-form textarea, .mockup-section .mobile-form textarea, .mockup-section .tablet-form textarea  {
     resize: none;
     width: 47%;
     padding: 0.6% 1.5%;
@@ -199,27 +203,11 @@
     border-radius: 2px;
 }
 
-.mockup-section .laptop-form textarea::placeholder, .mockup-section .mobile-form textarea::placeholder {
+.mockup-section .laptop-form textarea::placeholder, .mockup-section .mobile-form textarea::placeholder,  .mockup-section .tablet-form textarea::placeholder{
     color: #B4B4B4;
     font-family: OswaldLight;
 }
 
-.mockup-section .mobile-form input[type=text] {
-    width: 35%;
-    padding: 0.6% 1.5%;
-    display: inline-block;
-    border: 1px solid #E3E3E3;
-    border-radius: 2px;
-    box-sizing: border-box;
-}
-
-.mockup-section .mobile-form textarea {
-    resize: none;
-    width: 47%;
-    padding: 0.6% 1.5%;
-    border: 1px solid #E3E3E3;
-    border-radius: 2px;
-}
 
 @media screen and (min-width: 320px) and (max-width: 575.98px) {
     .mockup-form-screen {

@@ -5,7 +5,7 @@
         <div formArrayName="addLaptopMockup" class="container-fluid laptop-form"
             *ngFor="let item of myForm.get('addLaptopMockup').controls; let i = index;">
             <div [formGroupName]="i">
-                <div class="row mt-3">
+                <div class="row mb-5">
                     <div class="col-7 mockup-screen ">
                         <div class="laptop-mockup">
                             <div class="laptop-screen">
@@ -21,7 +21,7 @@
                         </div>
                         <div class="form-label-section">
                             <p class="form-label">Description</p>
-                            <textarea rows="4" class="form-input" formControlName="description"
+                            <textarea rows="3" class="form-input" formControlName="description"
                                 placeholder="Item description"></textarea>
                         </div>
                         <button type="button " class="btn form-remove-button mt-2" (click)="remove(i)">Remove</button>
@@ -35,7 +35,7 @@
             *ngFor="let item of myForm.get('addMobileMockup').controls; let i = index;">
             <div [formGroupName]="i">
 
-                <div class="row mt-3">
+                <div class="row mb-5">
                     <div class="col-7 mobile-mockup-screen">
 
                         <div class="mobile-mockup">
@@ -54,7 +54,7 @@
                         </div>
                         <div class="form-label-section">
                             <p class="form-label">Description</p>
-                            <textarea rows="8" class="form-input" formControlName="description"
+                            <textarea rows="3" class="form-input" formControlName="description"
                                 placeholder="Item description"></textarea>
                         </div>
                         <button type="button " class="mt-2 btn form-remove-button"
@@ -68,8 +68,8 @@
         <div formArrayName="addTabletMockup" class="tablet-form"
             *ngFor="let item of myForm.get('addTabletMockup').controls; let i = index;">
             <div [formGroupName]="i">
-                <div class="row mt-3">
-                    <div class="tablet-mockup-screen">
+                <div class="row mb-5">
+                    <div class="col-7 tablet-mockup-screen">
                         <div class="tablet-mockup">
 
                             <drag-scroll class="tablet-screen" [scrollbar-hidden]="hideScrollbar">
@@ -78,14 +78,14 @@
 
                         </div>
                     </div>
-                    <div>
+                    <div class="col-5 ">
                         <div class="form-label-section">
                             <p class="form-label">Title</p>
                             <input class="form-input" type="text" formControlName="title" placeholder="Item name">
                         </div>
                         <div class="form-label-section">
                             <p class="form-label">Description</p>
-                            <textarea rows="4" class="form-input" formControlName="description"
+                            <textarea rows="3" class="form-input" formControlName="description"
                                 placeholder="Item description"></textarea>
                         </div>
                         <button type="button " class="btn form-remove-button" (click)="removeTablet(i)">Remove</button>
