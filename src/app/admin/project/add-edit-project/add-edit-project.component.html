@@ -1,0 +1,140 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+    <div class=" container-fluid mockup-section">
+
+        <div formArrayName="addLaptopMockup" class="container-fluid laptop-form"
+            *ngFor="let item of myForm.get('addLaptopMockup').controls; let i = index;">
+            <div [formGroupName]="i">
+                <div class="row mb-5">
+                    <div class="col-7 mockup-screen ">
+                        <div class="laptop-mockup">
+                            <div class="laptop-screen">
+                                <img [src]="imgURL[i]" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-5 mockup-form-screen ">
+                        <div class="form-label-section">
+                            <p class="form-label">Title</p>
+                            <input class="form-input" type="text" formControlName="title" placeholder="Item name">
+                        </div>
+                        <div class="form-label-section">
+                            <p class="form-label">Description</p>
+                            <textarea rows="3" class="form-input" formControlName="description"
+                                placeholder="Item description"></textarea>
+                        </div>
+                        <button type="button " class="btn form-remove-button mt-2" (click)="remove(i)">Remove</button>
+                    </div>
+                </div>
+                <!-- Chosen name: {{ i }} -->
+            </div>
+        </div>
+
+        <div formArrayName="addMobileMockup" class="mobile-form"
+            *ngFor="let item of myForm.get('addMobileMockup').controls; let i = index;">
+            <div [formGroupName]="i">
+
+                <div class="row mb-5">
+                    <div class="col-7 mobile-mockup-screen">
+
+                        <div class="mobile-mockup">
+                            <img class="screenX" src="../../../../assets/images/IPhoneXPart.svg">
+                            <drag-scroll class="mobile-screen" [scrollbar-hidden]="hideScrollbar">
+                                <img drag-scroll-item [src]="mobileURL[i]" class="img-fluid">
+                            </drag-scroll>
+                        </div>
+
+                    </div>
+
+                    <div class="col-5 mockup-form-screen">
+                        <div class="form-label-section">
+                            <p class="form-label">Title</p>
+                            <input class="form-input" type="text" formControlName="title" placeholder="Item name">
+                        </div>
+                        <div class="form-label-section">
+                            <p class="form-label">Description</p>
+                            <textarea rows="3" class="form-input" formControlName="description"
+                                placeholder="Item description"></textarea>
+                        </div>
+                        <button type="button " class="mt-2 btn form-remove-button"
+                            (click)="removeMobile(i)">Remove</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div formArrayName="addTabletMockup" class="tablet-form"
+            *ngFor="let item of myForm.get('addTabletMockup').controls; let i = index;">
+            <div [formGroupName]="i">
+                <div class="row mb-5">
+                    <div class="col-7 tablet-mockup-screen">
+                        <div class="tablet-mockup">
+
+                            <drag-scroll class="tablet-screen" [scrollbar-hidden]="hideScrollbar">
+                                <img drag-scroll-item [src]="tabletURL[i]" class="img-fluid">
+                            </drag-scroll>
+
+                        </div>
+                    </div>
+                    <div class="col-5 ">
+                        <div class="form-label-section">
+                            <p class="form-label">Title</p>
+                            <input class="form-input" type="text" formControlName="title" placeholder="Item name">
+                        </div>
+                        <div class="form-label-section">
+                            <p class="form-label">Description</p>
+                            <textarea rows="3" class="form-input" formControlName="description"
+                                placeholder="Item description"></textarea>
+                        </div>
+                        <button type="button " class="btn form-remove-button" (click)="removeTablet(i)">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <p class="mx-auto add-mockup-title">
+            Add
+            <span class="add-mockup-title-bold">
+                New
+            </span>
+            Mockup
+        </p>
+
+        <div class="row mockup-devices">
+            <div class="col-2 mockup-device laptop-mockup-button ml-auto" (click)="fileInput.click()">
+
+                <img class="img-fluid" src="../../../../assets/images/laptop-mockup.svg">
+                <p class="mt-2">
+                    Laptop
+                </p>
+            </div>
+            <div class="col-2 mockup-device mobile-mockup-button" (click)="fileMobile.click()">
+                <img class="img-fluid" src="../../../../assets/images/iphone-mockup.svg">
+                <p class="mt-2">
+                    Mobile
+                </p>
+            </div>
+            <div class="col-2 mockup-device tablet-mockup-button mr-auto" (click)="fileTablet.click()">
+                <img class="img-fluid" src="../../../../assets/images/tablet-mockup.svg">
+                <p class="mt-2">
+                    Tablet
+                </p>
+            </div>
+        </div>
+
+        <!-- <input  type="file" (change)="onFileChanged($event)" > -->
+        <!-- <button >Select File</button>
+        <button (click)="onUpload()">Upload!</button> -->
+
+        <input #fileInput style="display: none;" type="file" accept='image/*' (change)="addLaptop(fileInput.files)" />
+        <input #fileMobile style="display: none;" type="file" accept='image/*' (change)="addMobile(fileMobile.files)" />
+        <input #fileTablet style="display: none;" type="file" accept='image/*' (change)="addTablet(fileTablet.files)" />
+
+    </div>
+
+
+    <button type="submit" class="btn btn-danger btn-lg btn-block">Submit Mockup</button>
+</form>

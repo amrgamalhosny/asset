@@ -10,6 +10,7 @@ import { CoreModule } from './core/core.module';
 // import {CarouselModule} from 'primeng/carousel';
 import { ProjectsModule } from './projects/projects.module';
 import { AdminModule } from './admin/admin.module';
+import { CarouselModule } from 'primeng/carousel/carousel';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { AdminModule } from './admin/admin.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    // CarouselModule, 
+    CarouselModule, 
     ProjectsModule,
     AdminModule
   ],

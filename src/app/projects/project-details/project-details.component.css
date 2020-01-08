@@ -134,6 +134,7 @@
   cursor: grab;
 
 }
+
 ::ng-deep .drag-scroll-content::-webkit-scrollbar-track{
   border-radius: 10px;
   background: transparent;
