@@ -2,57 +2,65 @@
 
     <div class=" container-fluid mockup-section">
 
-        <div formArrayName="addLaptopMockup" class="laptop-form"
+        <div formArrayName="addLaptopMockup" class="container-fluid laptop-form"
             *ngFor="let item of myForm.get('addLaptopMockup').controls; let i = index;">
             <div [formGroupName]="i">
-                <!-- <img [src]="imgURL[i]" height="200"> -->
-                <div class="mockup-screen">
-                    <div class="laptop-mockup">
-                        <div class="laptop-screen">
-                            <img [src]="imgURL[i]" class="img-fluid">
+                <div class="row mt-3">
+                    <div class="col-7 mockup-screen ">
+                        <div class="laptop-mockup">
+                            <div class="laptop-screen">
+                                <img [src]="imgURL[i]" class="img-fluid">
+                            </div>
                         </div>
                     </div>
-                    <div class="form-label-section">
-                        <p class="form-label">Title</p>
-                        <input class="form-input" type="text" formControlName="title" placeholder="Item name">
+
+                    <div class="col-5 mockup-form-screen ">
+                        <div class="form-label-section">
+                            <p class="form-label">Title</p>
+                            <input class="form-input" type="text" formControlName="title" placeholder="Item name">
+                        </div>
+                        <div class="form-label-section">
+                            <p class="form-label">Description</p>
+                            <textarea rows="4" class="form-input" formControlName="description"
+                                placeholder="Item description"></textarea>
+                        </div>
+                        <button type="button " class="btn form-remove-button mt-2" (click)="remove(i)">Remove</button>
                     </div>
-                    <div class="form-label-section">
-                        <p class="form-label">Description</p>
-                        <textarea rows="4" class="form-input" formControlName="description"
-                            placeholder="Item description"></textarea>
-                    </div>
-                    <button type="button " class="btn form-remove-button" (click)="remove(i)">Remove</button>
-                    <!-- Chosen name: {{ i }} -->
                 </div>
+                <!-- Chosen name: {{ i }} -->
             </div>
         </div>
 
         <div formArrayName="addMobileMockup" class="mobile-form"
             *ngFor="let item of myForm.get('addMobileMockup').controls; let i = index;">
             <div [formGroupName]="i">
-                <!-- <img [src]="imgURL[i]" height="200"> -->
-                <div class="mobile-mockup-screen">
-                    <div class="mobile-mockup">
-                        <img class="screenX" src="../../../../assets/images/IPhoneXPart.svg">
-                        <!-- <div class="mobile-screen">
-                            <img [src]="mobileURL[i]" class="img-fluid">
-                        </div> -->
 
-                        <drag-scroll class="mobile-screen" [scrollbar-hidden]="hideScrollbar">
-                            <img drag-scroll-item [src]="mobileURL[i]" class="img-fluid">
-                        </drag-scroll>
+                <div class="row mt-3">
+                    <div class="col-7 mobile-mockup-screen">
+
+                        <div class="mobile-mockup">
+                            <img class="screenX" src="../../../../assets/images/IPhoneXPart.svg">
+                            <drag-scroll class="mobile-screen" [scrollbar-hidden]="hideScrollbar">
+                                <img drag-scroll-item [src]="mobileURL[i]" class="img-fluid">
+                            </drag-scroll>
+                        </div>
+
                     </div>
-                    <div class="form-label-section">
-                        <p class="form-label">Title</p>
-                        <input class="form-input" type="text" formControlName="title" placeholder="Item name">
+
+                    <div class="col-5 mockup-form-screen">
+                        <div class="form-label-section">
+                            <p class="form-label">Title</p>
+                            <input class="form-input" type="text" formControlName="title" placeholder="Item name">
+                        </div>
+                        <div class="form-label-section">
+                            <p class="form-label">Description</p>
+                            <textarea rows="8" class="form-input" formControlName="description"
+                                placeholder="Item description"></textarea>
+                        </div>
+                        <button type="button " class="mt-2 btn form-remove-button"
+                            (click)="removeMobile(i)">Remove</button>
                     </div>
-                    <div class="form-label-section">
-                        <p class="form-label">Description</p>
-                        <textarea rows="4" class="form-input" formControlName="description"
-                            placeholder="Item description"></textarea>
-                    </div>
-                    <button type="button " class="btn form-remove-button" (click)="removeMobile(i)">Remove</button>
-                    <!-- Chosen name: {{ i }} -->
+
                 </div>
             </div>
         </div>
@@ -60,24 +68,28 @@
         <div formArrayName="addTabletMockup" class="tablet-form"
             *ngFor="let item of myForm.get('addTabletMockup').controls; let i = index;">
             <div [formGroupName]="i">
-                <!-- <img [src]="imgURL[i]" height="200"> -->
-                <div class="tablet-mockup-screen">
-                    <div class="tablet-mockup">
-                        <div class="tablet-screen">
-                            <img [src]="tabletURL[i]" class="img-fluid">
+                <div class="row mt-3">
+                    <div class="tablet-mockup-screen">
+                        <div class="tablet-mockup">
+
+                            <drag-scroll class="tablet-screen" [scrollbar-hidden]="hideScrollbar">
+                                <img drag-scroll-item [src]="tabletURL[i]" class="img-fluid">
+                            </drag-scroll>
+
                         </div>
                     </div>
-                    <div class="form-label-section">
-                        <p class="form-label">Title</p>
-                        <input class="form-input" type="text" formControlName="title" placeholder="Item name">
+                    <div>
+                        <div class="form-label-section">
+                            <p class="form-label">Title</p>
+                            <input class="form-input" type="text" formControlName="title" placeholder="Item name">
+                        </div>
+                        <div class="form-label-section">
+                            <p class="form-label">Description</p>
+                            <textarea rows="4" class="form-input" formControlName="description"
+                                placeholder="Item description"></textarea>
+                        </div>
+                        <button type="button " class="btn form-remove-button" (click)="removeTablet(i)">Remove</button>
                     </div>
-                    <div class="form-label-section">
-                        <p class="form-label">Description</p>
-                        <textarea rows="4" class="form-input" formControlName="description"
-                            placeholder="Item description"></textarea>
-                    </div>
-                    <button type="button " class="btn form-remove-button" (click)="removeTablet(i)">Remove</button>
-                    <!-- Chosen name: {{ i }} -->
                 </div>
             </div>
         </div>
