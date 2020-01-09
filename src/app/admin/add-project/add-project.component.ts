@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormArray, FormGroup } from '@angular/forms';
+import {SelectItem} from 'primeng/api';
 
 
 
@@ -14,7 +15,17 @@ export class AddProjectComponent implements OnInit {
   uploadedFiles: any[] = [];
   fileData: File = null;
   previewUrl:any = null;
+  
+  minDate: Date;
 
+  maxDate: Date;
+
+  es: any;
+
+  invalidDates: Array<Date>
+  date3: Date;
+  cities1;
+  selectedCity1;
 
 
   public imagePath;
@@ -40,10 +51,50 @@ export class AddProjectComponent implements OnInit {
       addMobileMockup: this.fb.array([]),
       addTabletMockup: this.fb.array([])
     })
+    this.cities1 = [
+      {label:'Select City', value:null},
+      {label:'New York', value:{id:1, name: 'New York', code: 'NY'}},
+      {label:'Rome', value:{id:2, name: 'Rome', code: 'RM'}},
+      {label:'London', value:{id:3, name: 'London', code: 'LDN'}},
+      {label:'Istanbul', value:{id:4, name: 'Istanbul', code: 'IST'}},
+      {label:'Paris', value:{id:5, name: 'Paris', code: 'PRS'}}
+  ];
 
   }
   ngOnInit() {
+    this.es = {
+      firstDayOfWeek: 1,
+      dayNames: [ "domingo","lunes","martes","miércoles","jueves","viernes","sábado" ],
+      dayNamesShort: [ "dom","lun","mar","mié","jue","vie","sáb" ],
+      dayNamesMin: [ "D","L","M","X","J","V","S" ],
+      monthNames: [ "enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre" ],
+      monthNamesShort: [ "ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic" ],
+      today: 'Hoy',
+      clear: 'Borrar'
   }
+
+  // this.tr = {
+  //     firstDayOfWeek : 1
+  // }
+
+  let today = new Date();
+  let month = today.getMonth();
+  let year = today.getFullYear();
+  let prevMonth = (month === 0) ? 11 : month -1;
+  let prevYear = (prevMonth === 11) ? year - 1 : year;
+  let nextMonth = (month === 11) ? 0 : month + 1;
+  let nextYear = (nextMonth === 0) ? year + 1 : year;
+  this.minDate = new Date();
+  this.minDate.setMonth(prevMonth);
+  this.minDate.setFullYear(prevYear);
+  this.maxDate = new Date();
+  this.maxDate.setMonth(nextMonth);
+  this.maxDate.setFullYear(nextYear);
+
+  let invalidDate = new Date();
+  invalidDate.setDate(today.getDate() - 1);
+  this.invalidDates = [today,invalidDate];
+}
 
 //   onUpload(event) {
 //     debugger;

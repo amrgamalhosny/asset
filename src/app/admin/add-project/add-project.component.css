@@ -78,6 +78,18 @@
     color: white !important;
 }
 
+/deep/ body .ui-fileupload .ui-fileupload-content {
+    border: 1px dashed #C3C3C3;
+}
+
+/deep/ .date-picker /deep/ .ui-button-icon-left {
+    display: block !important
+}
+
+.background-color-grey {
+    background-color: #F7F7F8;
+}
+
 .mockup-section {
     background-color: #F7F7F8;
     font-family: OswaldReg;
@@ -118,7 +130,7 @@
 }
 
 .laptop-mockup {
-    background-image: url('../../../../assets/images/MacBookSVG.SVG');
+    background-image: url('../../../assets/images/MacBookSVG.SVG');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: initial;
@@ -158,7 +170,7 @@
 }
 
 .tablet-mockup {
-    background-image: url('../../../../assets/images/IPad.svg');
+    background-image: url('../../../assets/images/IPad.svg');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: initial;
@@ -185,7 +197,7 @@
 }
 
 .mobile-mockup {
-    background-image: url('../../../../assets/images/iPhoneX.svg');
+    background-image: url('../../../assets/images/iPhoneX.svg');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: initial;
@@ -194,7 +206,7 @@
     margin-right: 5%;
     height: 53vh;
     padding-top: 0.65vw;
-    padding-right: 2.9...vw;
+    padding-right: 2.9vw;
     padding-left: 2.3vw;
     position: relative;
     width: 16vw;

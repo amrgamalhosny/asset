@@ -4,36 +4,81 @@
             Create <span class="oswaldBold">New</span> Project
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" multiple="multiple" accept="image/*" maxFileSize="20000000" [showUploadButton]="false" [showCancelButton]="false" [chooseLabel]="'Browse'" class="project-upload">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="container-fluid background-color-grey pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" multiple="multiple" accept="image/*" maxFileSize="20000000" [showUploadButton]="false" [showCancelButton]="false" [chooseLabel]="'Browse'" class="project-upload">
 
-                    <ng-template pTemplate="content">
-                        <div *ngIf="!uploadedFiles.length">
-                            <div class="container text-center padding-top img-container">
-                                <div class="oswaldMed heading-20">
-                                    Drag and drop an image
+                            <ng-template pTemplate="content">
+                                <div *ngIf="!uploadedFiles.length">
+                                    <div class="container text-center padding-top img-container">
+                                        <div class="oswaldMed heading-20">
+                                            Drag and drop an image
+                                        </div>
+                                        <div class="mt-1">
+                                            or browse to choose a file
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="mt-1">
-                                    or browse to choose a file
+                                <div *ngIf="uploadedFiles.length">
+                                    <!-- <div *ngFor="let file of uploadedFiles">
+                                    {{file.name}}
+                                </div> -->
                                 </div>
-                            </div>
+                                <!-- <ul *ngIf="uploadedFiles.length">
+                                <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                            </ul> -->
+                            </ng-template>
+                        </p-fileUpload>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="form-label-section">
+                            <p class="form-label">Project Name</p>
+                            <input class="form-input" type="text" placeholder="Ex. Vodafone Dashboard">
                         </div>
-                        <div *ngIf="uploadedFiles.length">
-                            <!-- <div *ngFor="let file of uploadedFiles">
-                                {{file.name}}
-                            </div> -->
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="form-label-section">
+                            <p class="form-label">Project Description</p>
+                            <textarea class="form-input" type="text" placeholder="Ex. Vodafone Dashboard"></textarea>
                         </div>
-                        <!-- <ul *ngIf="uploadedFiles.length">
-                            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
-                        </ul> -->
-                    </ng-template>
-                </p-fileUpload>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p-dropdown [options]="cities1" [(ngModel)]="selectedCity1"></p-dropdown>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <p-dropdown [options]="cities1" [(ngModel)]="selectedCity1"></p-dropdown>
+                    </div>
+                    <div class="col-4">
+                        <p-dropdown [options]="cities1" [(ngModel)]="selectedCity1"></p-dropdown>
+                    </div>
+                    <div class="col-4">
+                        <p-dropdown [options]="cities1" [(ngModel)]="selectedCity1"></p-dropdown>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p-calendar [(ngModel)]="date3" [showIcon]="true" class="date-picker"></p-calendar>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </div>
-    </div>
-    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+
 
         <div class=" container-fluid mockup-section">
 
@@ -71,7 +116,7 @@
                         <div class="col-7 mobile-mockup-screen">
 
                             <div class="mobile-mockup">
-                                <img class="screenX" src="../../../../assets/images/IPhoneXPart.svg">
+                                <img class="screenX" src="../../../assets/images/IPhoneXPart.svg">
                                 <drag-scroll class="mobile-screen" [scrollbar-hidden]="hideScrollbar">
                                     <img drag-scroll-item [src]="mobileURL[i]" class="img-fluid">
                                 </drag-scroll>
@@ -133,19 +178,19 @@
             <div class="row mockup-devices">
                 <div class="col-2 mockup-device laptop-mockup-button ml-auto" (click)="fileInput.click()">
 
-                    <img class="img-fluid" src="../../../../assets/images/laptop-mockup.svg">
+                    <img class="img-fluid" src="../../../assets/images/laptop-mockup.svg">
                     <p class="mt-2">
                         Laptop
                     </p>
                 </div>
                 <div class="col-2 mockup-device mobile-mockup-button" (click)="fileMobile.click()">
-                    <img class="img-fluid" src="../../../../assets/images/iphone-mockup.svg">
+                    <img class="img-fluid" src="../../../assets/images/iphone-mockup.svg">
                     <p class="mt-2">
                         Mobile
                     </p>
                 </div>
                 <div class="col-2 mockup-device tablet-mockup-button mr-auto" (click)="fileTablet.click()">
-                    <img class="img-fluid" src="../../../../assets/images/tablet-mockup.svg">
+                    <img class="img-fluid" src="../../../assets/images/tablet-mockup.svg">
                     <p class="mt-2">
                         Tablet
                     </p>
