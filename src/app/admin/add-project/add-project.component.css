@@ -86,8 +86,55 @@
     display: block !important
 }
 
+/deep/ .ui-dropdown {
+    width: 100% !important;
+}
+
 .background-color-grey {
     background-color: #F7F7F8;
+}
+
+label {
+    font-size: 14px;
+    font-family: OswaldReg;
+}
+
+/deep/ body /deep/ .date-picker /deep/ .ui-button {
+    margin: 0;
+    color: #FF0000;
+    background-color: transparent;
+    border: 1px solid gray;
+    font-size: 14px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    position: absolute;
+}
+
+/deep/ body /deep/ .date-picker /deep/ .ui-button:enabled:hover {
+    color: #FF0000;
+    background-color: transparent;
+    border: 1px solid gray;
+}
+
+/deep/ body /deep/ .ui-dropdown /deep/ .ui-dropdown-trigger {
+    color: #FF0000;
+}
+
+/deep/ .ui-calendar {
+    width: 100%;
+}
+
+/deep/ body /deep/ .date-picker /deep/ .ui-inputtext {
+    width: 100%;
+}
+
+/deep/ body /deep/ .date-picker /deep/ .ui-calendar.ui-calendar-w-btn /deep/ .ui-datepicker-trigger.ui-button {
+    position: absolute;
+    right: 0px;
+}
+
+::ng-deep body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item.ui-state-highlight,
+body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group.ui-state-highlight {
+    background-color: black;
 }
 
 .mockup-section {

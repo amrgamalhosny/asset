@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" multiple="multiple" accept="image/*" maxFileSize="20000000" [showUploadButton]="false" [showCancelButton]="false" [chooseLabel]="'Browse'" class="project-upload">
+                        <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" (onSelect)="onSelect($event)" multiple="multiple" accept="image/*" maxFileSize="20000000" [showUploadButton]="false" [showCancelButton]="false" [chooseLabel]="'Browse'" class="project-upload">
 
                             <ng-template pTemplate="content">
                                 <div *ngIf="!uploadedFiles.length">
@@ -35,40 +35,45 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-12">
+                    <div class="col-4">
                         <div class="form-label-section">
-                            <p class="form-label">Project Name</p>
-                            <input class="form-input" type="text" placeholder="Ex. Vodafone Dashboard">
+                            <label class="form-label">Project Name</label>
+                            <input class="form-input form-control mt-1" formControlName="projectName" type="text" placeholder="Ex. Vodafone Dashboard">
                         </div>
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-12">
+                    <div class="col-6">
                         <div class="form-label-section">
-                            <p class="form-label">Project Description</p>
-                            <textarea class="form-input" type="text" placeholder="Ex. Vodafone Dashboard"></textarea>
+                            <label class="form-label">Project Description</label>
+                            <textarea class="form-input form-control mt-1" formControlName="projectDesc" type="text" rows="4" placeholder="Ex. Vodafone Dashboard"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-12">
-                        <p-dropdown [options]="cities1" [(ngModel)]="selectedCity1"></p-dropdown>
+                    <div class="col-4">
+                        <label for="">Client Name</label> <br>
+                        <p-dropdown formControlName="clientName" [options]="cities1" [(ngModel)]="clientName"></p-dropdown>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-4">
-                        <p-dropdown [options]="cities1" [(ngModel)]="selectedCity1"></p-dropdown>
+                        <label for="">Industry</label> <br>
+                        <p-dropdown formControlName="industry" [options]="cities1" [(ngModel)]="industry"></p-dropdown>
                     </div>
                     <div class="col-4">
-                        <p-dropdown [options]="cities1" [(ngModel)]="selectedCity1"></p-dropdown>
+                        <label for="">Project Type</label> <br>
+                        <p-dropdown formControlName="type" [options]="cities1" [(ngModel)]="projectType"></p-dropdown>
                     </div>
                     <div class="col-4">
-                        <p-dropdown [options]="cities1" [(ngModel)]="selectedCity1"></p-dropdown>
+                        <label for="">Region</label> <br>
+                        <p-dropdown formControlName="region" [options]="cities1" [(ngModel)]="region"></p-dropdown>
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-12">
-                        <p-calendar [(ngModel)]="date3" [showIcon]="true" class="date-picker"></p-calendar>
+                    <div class="col-4">
+                        <label for="">Region</label> <br>
+                        <p-calendar formControlName="date" [(ngModel)]="date3" [showIcon]="true" class="date-picker"></p-calendar>
                     </div>
                 </div>
 
@@ -80,7 +85,7 @@
 
 
 
-        <div class=" container-fluid mockup-section">
+        <div class=" container-fluid mockup-section pt-5">
 
             <div formArrayName="addLaptopMockup" class="container-fluid laptop-form" *ngFor="let item of myForm.get('addLaptopMockup').controls; let i = index;">
                 <div [formGroupName]="i">

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormArray, FormGroup } from '@angular/forms';
+import { FormBuilder, FormArray, FormGroup, FormControl } from '@angular/forms';
 import {SelectItem} from 'primeng/api';
+import { readFile } from 'fs';
+import { SelectorContext } from '@angular/compiler';
 
 
 
@@ -25,7 +27,11 @@ export class AddProjectComponent implements OnInit {
   invalidDates: Array<Date>
   date3: Date;
   cities1;
-  selectedCity1;
+  clientName;
+  industry;
+  projectType;
+  region;
+
 
 
   public imagePath;
@@ -47,6 +53,14 @@ export class AddProjectComponent implements OnInit {
   
   constructor(private fb: FormBuilder) {
     this.myForm = this.fb.group({
+      banner: new FormControl(''),
+      projectName: new FormControl(''),
+      projectDesc: new FormControl(''),
+      clientName: new FormControl(''),
+      industry: new FormControl(''),
+      type: new FormControl(''),
+      region: new FormControl(''),
+      date: new FormControl(''),
       addLaptopMockup: this.fb.array([]),
       addMobileMockup: this.fb.array([]),
       addTabletMockup: this.fb.array([])
@@ -105,9 +119,8 @@ export class AddProjectComponent implements OnInit {
 
 // }
 onSelect(event){
-  debugger;
-  this.fileProgress(event.files);
-  console.log(this.uploadedFiles);
+    const file = event.target.files[0];
+    alert(file);
 }
 
 fileProgress(fileInput: any) {
@@ -144,6 +157,7 @@ onFileChanged(event) {
 
 onUpload(event) {
   for (let file of event.files) {
+    alert(event.target.files[0]);
     this.uploadedFiles.push(file);
   }
 }
@@ -171,11 +185,14 @@ addLaptop(files): void {
   var reader = new FileReader();
   this.imagePath = files;
   reader.readAsDataURL(files[0]);
+  alert(this.imagePath[0].webkitRelativePath);
+  debugger;
 
   reader.onload = (_event) => {
-    console.log("loading");
+    // console.log("loading");
     if (reader.result) {
       this.imgURL[this.size] = (reader.result + "");
+      
       this.size++;
     }
   }
