@@ -18,7 +18,6 @@ import {CalendarModule} from 'primeng/calendar';
     CommonModule,
     FileUploadModule,
     ReactiveFormsModule,
-    FileUploadModule,
     DragScrollModule,
     DropdownModule,
     FormsModule,

@@ -21,7 +21,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div class="project-details">
                                             <p class="project-country">
-                                                {{project.country}}
+                                                {{project.region}}
                                             </p>
                                             <span class="project-date">
                           {{project.date}}
@@ -41,7 +41,7 @@
 
                                     <hr class="project-hr" align="left">
                                     <p class="project-card-text">
-                                        {{project.desc}}
+                                        {{project.description}}
                                     </p>
 
                                     <div class="row ">
@@ -51,12 +51,13 @@
                                         <div class=" col-9">
                                             <div class="row latest-projects-emp-name">
                                                 <div class="col-sm-12">
-                                                    {{project.user.firstName}} {{project.user.lastName}}
+                                                    Sara Hassan
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-12 project-emp-title">
-                                                    {{project.user.position}}
+                                                    <!-- {{project.user.position}} -->
+                                                    Project Manager
                                                 </div>
                                             </div>
                                         </div>

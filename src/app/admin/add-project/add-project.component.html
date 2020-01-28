@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" (onSelect)="onSelect($event)" multiple="multiple" accept="image/*" maxFileSize="20000000" [showUploadButton]="false" [showCancelButton]="false" [chooseLabel]="'Browse'" class="project-upload">
+                        <p-fileUpload name="banner" (onSelect)="mySelector($event)" customUpload="true" multiple="multiple" accept="image/*" maxFileSize="20000000" [showUploadButton]="false" [showCancelButton]="false" [chooseLabel]="'Browse'" class="project-upload">
 
                             <ng-template pTemplate="content">
                                 <div *ngIf="!uploadedFiles.length">
