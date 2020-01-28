@@ -1,4 +1,7 @@
-<div class="banner">
+<div class="banner" [style.background]=" ' url(' + project.banner + ')'" >
+    <!-- [ngStyle]="{'background': 'linear-gradient(180deg, rgba(0, 0, 0, 0.17) 0%,
+    rgba(0, 0, 0, 0.65) 100%) 0% 0% no-repeat padding-box, url({{project.banner}})'
+    }" -->
     <div class="row project-details-row">
         <div class="col-md-6">
             <div class="project-details-banner">
@@ -11,12 +14,12 @@
                     </span>
                 </div>
 
-                <h1 class=" row project-details-title">Vodafone Campaign Tool</h1>
+                <h1 class=" row project-details-title">{{project.name}}</h1>
 
                 <div class="row">
                     <img class="solution-img-avatar" src="../../../assets/images/telecommunication copy.png">
                     <span class="project-type-title">
-                        Telecommunication
+                        {{project.type}}
                     </span>
                 </div>
             </div>
@@ -24,7 +27,7 @@
         <div class="col-3 offset-md-3 project-details-card-row">
             <div class="project-details-card">
                 <img class="project-details-card-img" src="../../../assets/images/vodafoneprojectdetails.svg">
-                <h6 class="project-details-card-title"> Vodafone Group </h6>
+                <h6 class="project-details-card-title"> {{project.clientName}} </h6>
             </div>
         </div>
     </div>
@@ -35,7 +38,7 @@
     <h1 class="project-design-title">ABOUT PROJECT</h1>
     <p class="project-about-desc">
         <!-- {{project.about}} -->
-        sdas sadsa asdasssdsadasd
+        {{project.description}}
     </p>
 </div>
 

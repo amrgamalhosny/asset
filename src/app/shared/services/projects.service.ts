@@ -32,11 +32,12 @@ export class ProjectsService {
     }
 
     getProject(id: number): Observable<IProject> {
-        return this.http.get<IProject[]>(this.baseUrl + 'projects.json')
+        return this.http.get<IProject[]>(this.baseUrl + 'getProjects.php')
             .pipe(
                 map(projects => {
-                    let project = projects.filter((pro: IProject) => pro.id === id);
-                    console.log("proserv" + project);
+                    let project = projects.filter((pro: IProject) => pro.id == id);
+                    console.log("proserv: " , projects);
+                    console.log("pro: " , project);
                     return (project && projects.length) ? project[0] : null;
                 }),
                 catchError(this.handleError)
@@ -54,6 +55,13 @@ export class ProjectsService {
                 catchError(this.handleError)
             );
     }
+
+    public uploadFile(data) {
+        let uploadURL = 'api/upload.php';
+        return this.http.post<any>(uploadURL, data);
+    }
+
+
     private handleError(error: any) {
         console.log("error");
         console.error('server error:', error);
@@ -63,9 +71,5 @@ export class ProjectsService {
         }
         return Observable.throw(error || 'Node.js server error');
     }
-    public uploadFile(data) {
-        let uploadURL = 'api/upload.php';
-        return this.http.post<any>(uploadURL, data);
-      }
 
 }

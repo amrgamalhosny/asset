@@ -53,7 +53,7 @@ export class AddProjectComponent implements OnInit {
   classesFile: any;
 
 
-  constructor(private fb: FormBuilder, private addProject:ProjectsService) {
+  constructor(private fb: FormBuilder, private addProject: ProjectsService) {
     this.myForm = this.fb.group({
       banner: new FormControl(''),
       projectName: new FormControl(''),
@@ -69,11 +69,11 @@ export class AddProjectComponent implements OnInit {
     })
     this.cities1 = [
       { label: 'Select City', value: null },
-      { label: 'New York', value: { id: 1, name: 'New York', code: 'NY' } },
-      { label: 'Rome', value: { id: 2, name: 'Rome', code: 'RM' } },
-      { label: 'London', value: { id: 3, name: 'London', code: 'LDN' } },
-      { label: 'Istanbul', value: { id: 4, name: 'Istanbul', code: 'IST' } },
-      { label: 'Paris', value: { id: 5, name: 'Paris', code: 'PRS' } }
+      { label: 'New York', value: 'Nyc' },
+      { label: 'Rome', value: 'rome' },
+      { label: 'London', value: 'london' },
+      { label: 'Istanbul', value: 'ist' },
+      { label: 'Paris', value: 'paris' }
     ];
 
   }
@@ -162,14 +162,23 @@ export class AddProjectComponent implements OnInit {
 
   onSubmit() {
     alert(JSON.stringify(this.myForm.value));
+
     const formData = new FormData();
     formData.append('banner', this.myForm.get('banner').value);
+    formData.append('name', this.myForm.get('projectName').value);
+    formData.append('clientName', this.myForm.get('clientName').value);
+    formData.append('desc', this.myForm.get('projectDesc').value);
+    formData.append('industry', this.myForm.get('industry').value);
+    formData.append('type', this.myForm.get('type').value);
+    formData.append('region', this.myForm.get('region').value);
+    formData.append('date', this.myForm.get('date').value);
+
 
     this.addProject.uploadFile(formData).subscribe(
       (res) => {
-          console.log(res);
+        console.log(res);
       },
-      (err) => {  
+      (err) => {
         console.log(err);
       }
     );

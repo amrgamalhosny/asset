@@ -1,8 +1,8 @@
 .banner {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.17) 0%, rgba(0, 0, 0, 0.65) 100%) 0% 0% no-repeat padding-box, url('../../../assets/images/Clip1.png');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.17) 0%, rgba(0, 0, 0, 0.65) 100%) 0% 0% no-repeat padding-box;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
   height: 100vh;
   color: white;
   font-family: OswaldReg;
@@ -132,10 +132,9 @@
 .screen1:hover {
   cursor: -webkit-grab;
   cursor: grab;
-
 }
 
-::ng-deep .drag-scroll-content::-webkit-scrollbar-track{
+::ng-deep .drag-scroll-content::-webkit-scrollbar-track {
   border-radius: 10px;
   background: transparent;
 }
@@ -212,7 +211,7 @@
 }
 
 .screen2::-webkit-scrollbar-thumb {
-  background-color:#878787;
+  background-color: #878787;
 }
 
 .project-design-section {
