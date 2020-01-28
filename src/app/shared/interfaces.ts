@@ -1,15 +1,14 @@
 export interface IProject {
     id: number;
+    banner: string;
     name: string;
-    country: string;
-    date: string;
+    description: string;
     desc: string;
-    showOnHomePage: boolean;
-    company: ICompany;
-    user: IUser;
-    about: string;
-    uxDesc: string;
-    uxDesign: string;
+    clientName: String;
+    industry: ICompany;
+    type: IUser;
+    region: string;
+    date: string;
 }
 
 export interface ICompany {

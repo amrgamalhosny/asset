@@ -14,7 +14,7 @@ import { IProject, IUser } from '../interfaces';
 export class ProjectsService {
 
     projectUrl: string = 'https://angulardemo-12279.firebaseio.com/projects';
-    baseUrl: string = '../../assets/data/';
+    baseUrl: string = 'api/';
     constructor(private http: HttpClient) { }
 
     getProjects(): Observable<IProject[]> {
@@ -25,7 +25,7 @@ export class ProjectsService {
     }
 
     getAllProjects(): Observable<IProject[]> {
-        return this.http.get<IProject[]>(this.baseUrl + 'projects.json')
+        return this.http.get<IProject[]>(this.baseUrl + 'getProjects.php')
             .pipe(
                 catchError(this.handleError)
             )
@@ -63,5 +63,9 @@ export class ProjectsService {
         }
         return Observable.throw(error || 'Node.js server error');
     }
+    public uploadFile(data) {
+        let uploadURL = 'api/upload.php';
+        return this.http.post<any>(uploadURL, data);
+      }
 
 }
