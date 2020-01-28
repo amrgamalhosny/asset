@@ -176,6 +176,8 @@ export class AddProjectComponent implements OnInit {
 
     this.addProject.uploadFile(formData).subscribe(
       (res) => {
+        console.log("res status ", res.status);
+        console.log("res project id ", res.projectId);
         console.log(res);
       },
       (err) => {
