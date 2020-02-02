@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from 'src/app/shared/services/search.service';
+import { ProjectsService } from 'src/app/shared/services/projects.service';
+import { IProject } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-search',
@@ -13,6 +15,7 @@ services;
 egy: boolean = false;
 por: boolean = false;
 query;
+  projects: IProject[];
 
 check(value: string) {
   if (value === 'Portugal') { this.por = !this.por }
@@ -37,12 +40,18 @@ check(value: string) {
     ); }
   }
 
-  constructor(private _searchService:SearchService) { }
+  constructor(private _searchService:SearchService, private dataService: ProjectsService) { }
 
   ngOnInit() {
     this.getCustomers();
     this.getSolutions();
     this.getServices();
+    
+    this.dataService.getAllProjects()
+    .subscribe((projects: IProject[])=>{
+      this.projects = projects
+      console.log("pro: ",this.projects);
+    });
   }
 
   getCustomers(){
@@ -73,4 +82,5 @@ check(value: string) {
       }
     );  
   }
+  
 }

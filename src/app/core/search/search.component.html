@@ -177,8 +177,7 @@
                                 <div class="card resultsCustomer row" *ngFor="let cust of customers | bannerSearch:query;">
                                     <div class="col-md-3 resultsCustomerImg">
                                         <div class="mt-50">
-                                            <img class="card-img-top" src="../../../assets/images/vod2.png"
-                                                alt="Card image cap">
+                                            <img class="card-img-top" src="../../../assets/images/vod2.png" alt="Card image cap">
                                         </div>
 
                                     </div>
@@ -201,34 +200,33 @@
                                         <p class="card-text text-grey">{{cust.desc}}</p>
                                     </div>
                                 </div>
-                               
+
                             </div>
                             <!-- End Customers -->
                             <!-- Solutions -->
                             <div class="container">
-                                <div class="card resultsSolution row"  *ngFor="let sol of solutions | bannerSearch:query;">
-                                    <div class="card-body col-md-12 resultsSolutionContent"  
-                                   >
+                                <div class="card resultsSolution row" *ngFor="let project of projects | bannerSearch:query;">
+                                    <div class="card-body col-md-12 resultsSolutionContent">
                                         <div class="row">
                                             <div class="col-md-10">
                                                 <div class="resultsSolutionDate">
-                                                    <span>{{sol.country}}</span>
-                                                    <small>25 may 2019</small>
+                                                    <span>{{project.region}}</span>
+                                                    <small>{{project.date}}</small>
                                                 </div>
                                                 <div class="resultsSolutionTitle">
-                                                    <p><span>{{sol.name}}</span> {{sol.full}}</p>
+                                                    <p><span>CRM</span> {{project.name}}</p>
                                                 </div>
                                             </div>
                                             <div class="col-md-2 resultsSolutionImg">
                                                 <img src="../../../assets/images/vodafone.png">
                                             </div>
                                         </div>
-                                        <p class="card-text text-grey">{{sol.desc}}</p>
+                                        <p class="card-text text-grey">{{project.description}}</p>
                                         <div class="resultsSolutionUser">
                                             <img src="../../../assets/images/user.jpg">
                                             <div>
                                                 <p class="userName">
-                                                    Amr Gamal
+                                                    {{project.name | uppercase}}
                                                 </p>
                                                 <p class="userTitle">
                                                     <span>ASSET</span> Consultant
@@ -265,9 +263,8 @@
                         <ng-template ngbTabContent>
                             <!-- SOLUTIONS -->
                             <div class="container">
-                                <div class="card resultsSolution row"  *ngFor="let sol of solutions | bannerSearch:query">
-                                    <div class="card-body col-md-12 resultsSolutionContent"  
-                                   >
+                                <div class="card resultsSolution row" *ngFor="let sol of solutions | bannerSearch:query">
+                                    <div class="card-body col-md-12 resultsSolutionContent">
                                         <div class="row">
                                             <div class="col-md-10">
                                                 <div class="resultsSolutionDate">
@@ -296,7 +293,7 @@
                                         </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
                             <!-- End SOLUTIONS -->
                         </ng-template>
@@ -320,7 +317,7 @@
                                         <p class="card-text text-grey">{{serv.desc}}</p>
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <!-- End SERVICES -->
                         </ng-template>
@@ -335,8 +332,7 @@
                                 <div class="card resultsCustomer row" *ngFor="let cust of customers | bannerSearch:query;">
                                     <div class="col-md-3 resultsCustomerImg">
                                         <div class="mt-50">
-                                            <img class="card-img-top" src="../../../assets/images/vod2.png"
-                                                alt="Card image cap">
+                                            <img class="card-img-top" src="../../../assets/images/vod2.png" alt="Card image cap">
                                         </div>
 
                                     </div>
@@ -359,7 +355,7 @@
                                         <p class="card-text text-grey">{{cust.desc}}</p>
                                     </div>
                                 </div>
-                               
+
                             </div>
                             <!-- End CUSTOMERS -->
                         </ng-template>

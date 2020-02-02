@@ -161,7 +161,6 @@ export class AddProjectComponent implements OnInit {
   }
 
   onSubmit() {
-    alert(JSON.stringify(this.myForm.value));
 
     const formData = new FormData();
     formData.append('banner', this.myForm.get('banner').value);

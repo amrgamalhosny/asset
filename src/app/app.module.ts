@@ -26,7 +26,7 @@ import { CarouselModule } from 'primeng/carousel';
     ReactiveFormsModule,
     CarouselModule, 
     ProjectsModule,
-    AdminModule
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

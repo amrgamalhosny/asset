@@ -15,6 +15,7 @@ export class ProjectsService {
 
     projectUrl: string = 'https://angulardemo-12279.firebaseio.com/projects';
     baseUrl: string = 'api/';
+   // baseUrl: string = 'realapi/';
     constructor(private http: HttpClient) { }
 
     getProjects(): Observable<IProject[]> {
