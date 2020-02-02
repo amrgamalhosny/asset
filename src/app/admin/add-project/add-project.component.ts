@@ -33,6 +33,9 @@ export class AddProjectComponent implements OnInit {
   projectType;
   region;
 
+  clients;
+  projecttypes;
+  regions;
 
 
   public imagePath;
@@ -65,8 +68,10 @@ export class AddProjectComponent implements OnInit {
       date: new FormControl(''),
       addLaptopMockup: this.fb.array([]),
       addMobileMockup: this.fb.array([]),
-      addTabletMockup: this.fb.array([])
-    })
+      addTabletMockup: this.fb.array([]),
+      bannertest: ['']
+    });
+
     this.cities1 = [
       { label: 'Select City', value: null },
       { label: 'New York', value: 'Nyc' },
@@ -76,6 +81,26 @@ export class AddProjectComponent implements OnInit {
       { label: 'Paris', value: 'paris' }
     ];
 
+    this.clients = [
+      { label: 'Select Client', value: null },
+      { label: 'Vodafone', value: 'vodafone' },
+      { label: 'Etisalat', value: 'etisalat' },
+      { label: 'Orange', value: 'orange' }
+    ];
+
+    this.projecttypes = [
+      { label: 'Select Type', value: null },
+      { label: 'Telecommunication', value: 'Telecommunication' }
+    ];
+
+    this.regions = [
+      { label: 'Select Country', value: null },
+      { label: 'Egypt', value: 'Egypt' },
+      { label: 'KSA', value: 'KSA' },
+      { label: 'UAE', value: 'UAE' },
+      { label: 'UK', value: 'UK' }
+
+    ];
   }
   ngOnInit() {
     this.es = {
@@ -146,8 +171,6 @@ export class AddProjectComponent implements OnInit {
     }
   }
 
-
-
   onFileChanged(event) {
     const file = event.target.files[0];
     console.log("file: " + file);
@@ -172,29 +195,55 @@ export class AddProjectComponent implements OnInit {
     formData.append('type', this.myForm.get('type').value);
     formData.append('region', this.myForm.get('region').value);
     formData.append('date', this.myForm.get('date').value);
-
+    if (this.imgURL.length > 0) { console.log("sending laptop"); formData.append('laptop', JSON.stringify(this.myForm.get('addLaptopMockup').value)); }
+    if (this.mobileURL.length > 0) {console.log("sending mobile");  formData.append('mobile', JSON.stringify(this.myForm.get('addMobileMockup').value)); }
+    if (this.tabletURL.length > 0) {console.log("sending tablet");  formData.append('tablet', JSON.stringify(this.myForm.get('addTabletMockup').value)); }
 
     this.addProject.uploadFile(formData).subscribe(
       (res) => {
-        console.log("res status ", res.status);
-        console.log("res project id ", res.projectId);
-        console.log(res);
+        // console.log("res status ", res.status);
+        // console.log("res project id ", res.projectId);
+        console.log("array: ", res);
       },
       (err) => {
-        console.log(err);
+        console.log(err.error.text);
       }
     );
+
+    // let projID = "";
+    // this.addProject.uploadFile(formData).subscribe(
+    //   (res) => {
+    //     console.log("res status ", res.status);
+    //     console.log("res project id ", res.projectId);
+    //     projID = res.projectId;
+    //     console.log(res);
+    //   },
+    //   (err) => {
+    //     console.log(err);
+    //   }
+    // );
+
+
+
+
+
+
   }
 
   createItem(url): FormGroup {
-    return this.fb.group({
-      title: '',
-      description: '',
-      img: url
+
+    console.log("url in create item: ", url);
+    let formArr = this.fb.group({
+      title: new FormControl(''),
+      description: new FormControl(''),
+      img: new FormControl('')
     });
+    formArr.get('img').setValue(url + "");
+    return formArr;
   }
 
   addLaptop(files): void {
+
 
     var mimeType = files[0].type;
     if (mimeType.match(/image\/*/) == null) {
@@ -205,7 +254,6 @@ export class AddProjectComponent implements OnInit {
     var reader = new FileReader();
     this.imagePath = files;
     reader.readAsDataURL(files[0]);
-    alert(this.imagePath[0].webkitRelativePath);
 
     reader.onload = (_event) => {
       // console.log("loading");
@@ -217,9 +265,9 @@ export class AddProjectComponent implements OnInit {
     }
 
     reader.onloadend = (_event) => {
-      console.log(files[0]);
       this.addLaptopMockup = this.myForm.get('addLaptopMockup') as FormArray;
-      this.addLaptopMockup.push(this.createItem(files[0]));
+      console.log("reader res: ", reader.result);
+      this.addLaptopMockup.push(this.createItem(reader.result));
     }
 
   }
@@ -242,9 +290,11 @@ export class AddProjectComponent implements OnInit {
         this.mobileSize++;
       }
     }
+    reader.onloadend = (_event) => {
+      this.addMobileMockup = this.myForm.get('addMobileMockup') as FormArray;
+      this.addMobileMockup.push(this.createItem(reader.result));
+    }
 
-    this.addMobileMockup = this.myForm.get('addMobileMockup') as FormArray;
-    this.addMobileMockup.push(this.createItem(files[0]));
   }
 
   addTablet(files): void {
@@ -265,9 +315,11 @@ export class AddProjectComponent implements OnInit {
         this.tabletSize++;
       }
     }
+    reader.onloadend = (_event) => {
+      this.addTabletMockup = this.myForm.get('addTabletMockup') as FormArray;
+      this.addTabletMockup.push(this.createItem(reader.result));
+    }
 
-    this.addTabletMockup = this.myForm.get('addTabletMockup') as FormArray;
-    this.addTabletMockup.push(this.createItem(files[0]));
   }
 
   remove(index): void {
@@ -287,10 +339,12 @@ export class AddProjectComponent implements OnInit {
     this.addTabletMockup.removeAt(index);
     this.tabletSize--;
   }
+
   mySelector(event) {
     for (let file of event.files) {
       console.log("myselector", file);
       this.myForm.get('banner').setValue(file);
+
     }
   }
 

@@ -1,5 +1,5 @@
 <span class="banner-bck"></span>
-<div class="banner" [style.background]=" ' url(' + project.banner + ')'" >
+<div class="banner" [style.background]=" ' url(' + project.banner + ')'">
     <!-- [ngStyle]="{'background': 'linear-gradient(180deg, rgba(0, 0, 0, 0.17) 0%,
     rgba(0, 0, 0, 0.65) 100%) 0% 0% no-repeat padding-box, url({{project.banner}})'
     }" -->
@@ -11,7 +11,7 @@
                         {{project.region}}
                     </p>
                     <span class="project-date">
-                        {{project.date}}
+                        {{project.date | date: 'dd/MM/yyyy'}}
                     </span>
                 </div>
 
@@ -43,42 +43,57 @@
     </p>
 </div>
 
-<div class="project-design-section">
+<div *ngIf="mockups.length > 0" class="project-design-section">
     <h2 class="project-design-title">
         UX DESIGN
     </h2>
 
     <p class="project-design-desc">
         <!-- {{project.uxDesc}} -->
-        sadasdada sadasd aasdasdasdasda
     </p>
+    <div *ngFor="let m of mockups">
 
-    <div class="test-img2">
-        <div class="screen2">
-            <img src="../../../assets/images/Asset.jpg" class="img-fluid">
+        <div *ngIf='m.type=="0"'>
+            <div class="test-img2">
+                <div class="screen2">
+                    <img [src]="m.image" class="img-fluid">
+                </div>
+            </div>
+
+            <p class=" oswaldBold project-design-desc">
+                {{m.title}}
+            </p>
+
+            <p class="project-design-desc">
+                {{m.description}}
+            </p>
         </div>
-    </div>
 
-    <div class="test-img2">
-        <div class="screen2">
-            <img src="../../../assets/images/Asset.jpg" class="img-fluid">
+
+        <div *ngIf='m.type=="1"'>
+            <div  class="test-img1">
+                <img class="screen0" src="../../../assets/images/IPhoneXPart.svg">
+                <drag-scroll class="screen1" [scrollbar-hidden]="hideScrollbar">
+                    <img drag-scroll-item [src]="m.image" class="img-fluid" />
+                </drag-scroll>
+
+            </div>
+
+            <p class=" oswaldBold project-design-desc">
+                {{m.title}}
+            </p>
+
+            <p class="project-design-desc">
+                {{m.description}}
+            </p>
         </div>
-    </div>
 
-    <div class="test-img1">
-        <img class="screen0" src="../../../assets/images/IPhoneXPart.svg">
-
-        <!-- <div class="screen1">
-            <img src="../../../assets/images/Asset.jpg" class="img-fluid">
-        </div> -->
-        <!-- 
-         [drag-scroll-disabled]="disabled"
-            [drag-scroll-x-disabled]="xDisabled" [drag-scroll-y-disabled]="yDisabled" -->
-        <drag-scroll class="screen1" [scrollbar-hidden]="hideScrollbar">
-            <img drag-scroll-item src="../../../assets/images/Asset.jpg" class="img-fluid" />
-        </drag-scroll>
 
     </div>
+
+
+
+
 
     <h1 class="project-design-thanks">THANKS</h1>
 
@@ -98,8 +113,8 @@
                 <div [className]="projects.length>2 ? 'col-12' : 'col-9 hide-arrows'">
                     <p-carousel [value]="projects" [numVisible]="2.5" [numScroll]="1">
                         <ng-template let-otherProject pTemplate="item">
-                            <div class="col-12 pro">
-                                <div class="card project-card">
+                            <div  [className]="projects.length>2 ? 'col-12 pro ' : 'col-7 pro'">
+                                <div class="card project-card" (click)="goToDetails(project)">
                                     <div class="card-body">
 
                                         <div class="d-flex justify-content-between">
@@ -108,7 +123,7 @@
                                                     {{otherProject.region}}
                                                 </p>
                                                 <span class="project-date">
-                                                    {{otherProject.date}}
+                                                    {{otherProject.date | date: 'dd/MM/yyyy'}}
                                                 </span>
                                             </div>
 

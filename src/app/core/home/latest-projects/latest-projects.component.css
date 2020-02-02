@@ -116,6 +116,8 @@
   font-family: OswaldBold;
   margin-top: -4%;
   color: #0F0F0F;
+  max-width: 90%;
+  height: 60px;
 }
 
 @media (max-width:600px) {
@@ -171,12 +173,12 @@
 .project-card-text {
   color: #737373;
   font-family: OswaldReg;
-  margin-top: 8%;
-  margin-bottom: 8%;
+  margin-top: 4%;
+  margin-bottom: 4%;
   line-height: 23px;
-  max-height: 70px;
-  min-height: 70px;
+  height: 70px;
   overflow: hidden;
+
 }
 
 .project-img-avatar {
