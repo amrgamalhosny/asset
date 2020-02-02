@@ -14,7 +14,7 @@
             <div [className]="projects.length > 2 ? 'col-12' : 'col-9 hide-arrows'">
                 <p-carousel [value]="projects" [numVisible]="2.5" [numScroll]="1">
                     <ng-template let-project pTemplate="item">
-                        <div class="col-12 pro">
+                        <div  [className]="projects.length >= 2 ? 'col-12 pro' : 'col-7 pro'">
                             <div class="card project-card" (click)="goToDetails(project)">
                                 <div class="card-body">
 
@@ -24,14 +24,15 @@
                                                 {{project.region}}
                                             </p>
                                             <span class="project-date">
-                          {{project.date}}
-                        </span>
+                                                {{project.date | date: 'dd/MM/yyyy' }}
+                                            </span>
                                         </div>
 
                                         <div>
                                             <!-- ../../../../asset/src/assets/images/175197-1.jpg -->
                                             <!-- ../../../../assets/images/project.png -->
-                                            <img src='../../../../assets/images/project.png ' alt="php" class="img-fluid">
+                                            <img src='../../../../assets/images/project.png ' alt="php"
+                                                class="img-fluid">
                                         </div>
                                     </div>
 

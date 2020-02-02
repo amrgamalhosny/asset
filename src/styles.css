@@ -152,7 +152,7 @@ body {
 }
 
 .oswaldBold {
-    font-family: OswaldBold;
+    font-family: OswaldBold !important;
 }
 
 @font-face {
@@ -161,7 +161,7 @@ body {
 }
 
 .oswaldReg {
-    font-family: OswaldReg;
+    font-family: OswaldReg !important;
 }
 
 @font-face {
@@ -170,7 +170,7 @@ body {
 }
 
 .oswaldMed {
-    font-family: OswaldMed;
+    font-family: OswaldMed !important;
 }
 
 @font-face {
@@ -179,7 +179,7 @@ body {
 }
 
 .oswaldLight {
-    font-family: OswaldLight;
+    font-family: OswaldLight !important;
 }
 
 

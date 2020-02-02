@@ -9,6 +9,15 @@ export interface IProject {
     type: IUser;
     region: string;
     date: string;
+    mockups: IMockup[];
+}
+
+export interface IMockup{
+    id: number;
+    image: string;
+    projID: number;
+    type: string;
+    description: string;
 }
 
 export interface ICompany {
@@ -16,7 +25,6 @@ export interface ICompany {
     name: string;
     desc: string;
     img: string;
-    showOnHomePage: boolean;
 }
 
 export interface IUser {

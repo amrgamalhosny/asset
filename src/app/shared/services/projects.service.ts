@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { map, catchError } from 'rxjs/operators';
-import { IProject, IUser } from '../interfaces';
+import { IProject, IUser, IMockup } from '../interfaces';
 
 // import { ICategory, IProduct, IProductItem, ITeam } from '../app/shared/interfaces';
 
@@ -55,6 +55,19 @@ export class ProjectsService {
                 }),
                 catchError(this.handleError)
             );
+    }
+
+    getMockups(proj_id: number): Observable<IMockup[]>{
+        return this.http.get<IMockup[]>(this.baseUrl + 'getMockups.php')
+            .pipe(
+                map(allmockups => {
+                    let mockups = [];
+                    mockups = allmockups.filter((m: IMockup) => m.projID == proj_id);
+                    console.log("all mockups: " + mockups);
+                    return (mockups && allmockups.length) ? mockups : null;
+                }),
+                catchError(this.handleError)
+            )
     }
 
     public uploadFile(data) {

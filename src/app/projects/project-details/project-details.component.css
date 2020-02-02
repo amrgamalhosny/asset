@@ -1,5 +1,4 @@
 .banner {
-
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
@@ -14,7 +13,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.17) 0%, rgba(0, 0, 0, 0.65) 100%) 0% 0% no-repeat padding-box ;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.17) 0%, rgba(0, 0, 0, 0.65) 100%) 0% 0% no-repeat padding-box;
   /* background-color: #ffa50038; */
 }
 
@@ -117,12 +116,12 @@
   top: 0%;
   text-align: center;
   width: 30vw;
-  height: 49vw;
+  height: 50vw;
   padding-top: 1vw;
   padding-right: 5.5vw;
   padding-left: 4.3vw;
   position: relative;
-  margin: 7% 0%;
+  margin-top: 7%;
 }
 
 .screen0 {
@@ -196,16 +195,16 @@
   top: 0%;
   text-align: center;
   width: 85vw;
-  height: 49vw;
+  height: 48vw;
   padding-top: 3.2vw;
   padding-right: 10.6vw;
   padding-left: 10.6vw;
   position: relative;
-  margin: 7% 0%;
+  margin-top: 7%;
 }
 
 .screen2 {
-  height: 40.5vw;
+  height: 39.8vw;
   overflow-y: scroll;
 }
 
@@ -217,7 +216,7 @@
 
 .screen2::-webkit-scrollbar {
   width: 6px;
-  background-color: #F5F5F5;
+  background-color: transparent;
 }
 
 .screen2::-webkit-scrollbar-thumb {
@@ -369,6 +368,8 @@
   font-family: OswaldBold;
   margin-top: -4%;
   color: #0F0F0F;
+  max-width: 90%;
+  height: 60px;
 }
 
 @media (max-width:600px) {
@@ -424,8 +425,8 @@
 .project-card-text {
   color: #737373;
   font-family: OswaldReg;
-  margin-top: 8%;
-  margin-bottom: 8%;
+  margin-top: 4%;
+  margin-bottom: 4%;
   line-height: 23px;
   max-height: 70px;
   min-height: 70px;
