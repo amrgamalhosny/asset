@@ -211,7 +211,7 @@
                                             <div class="col-md-10">
                                                 <div class="resultsSolutionDate">
                                                     <span>{{project.region}}</span>
-                                                    <small>{{project.date}}</small>
+                                                    <small>{{project.date | date: 'dd/MM/yyyy' }}</small>
                                                 </div>
                                                 <div class="resultsSolutionTitle">
                                                     <p><span>CRM</span> {{project.name}}</p>

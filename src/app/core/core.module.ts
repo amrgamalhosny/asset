@@ -17,11 +17,12 @@ import { CustomersComponent } from './home/customers/customers.component';
 import { SolutionsComponent } from './home/solutions/solutions.component';
 import { CarouselModule } from 'primeng/carousel';
 import { FooterComponent } from './home/footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
 
   declarations: [HomeComponent, SearchComponent, BannerComponent,BannerSearchPipe, LatestProjectsComponent, 
-    NewsComponent, CustomersComponent, SolutionsComponent, FooterComponent],
+    NewsComponent, CustomersComponent, SolutionsComponent, FooterComponent, HeaderComponent],
   imports: [
     CommonModule,
     FormsModule,

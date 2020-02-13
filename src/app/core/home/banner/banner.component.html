@@ -14,8 +14,8 @@
     <div class="container searchCont smNone">
         <div class="row">
             <div class="col-12">
-                <p class="searchTitle" [@focusInOut]="isFocus ? 'textOn' : 'textOut'">
-                    <span>Explore</span> the EOH World
+                <p class="searchTitle OswaldExtraLight" [@focusInOut]="isFocus ? 'textOn' : 'textOut'">
+                    <span class="oswaldBold">Explore</span> THE ASSET WORLD
                 </p>
                 <small>
                     Search by Industry, Customer, Service, Solution...
@@ -43,9 +43,9 @@
                     <div class="title" [hidden]="(testTwo | bannerSearch:query).length === 0">
                         <p>Services</p>
                     </div>
-                    <div class="text" *ngFor="let t2 of testTwo  | slice:0:3 | bannerSearch:query; let i=index">
+                    <div class="text cursor-pointer" *ngFor="let project of projects  | slice:0:3 | bannerSearch:query; let i=index" (click)="goToDetails(project)">
                         <img src="../../../../assets/images/22.svg">
-                        <p>{{t2.title}}</p>
+                        <p>{{project.name}}</p>
                     </div>
                 </div>
                 <!-- End Row -->
@@ -137,7 +137,7 @@
             <div class="col-lg-3 col-md-3 col-6" *ngFor="let customer of bannerCustomers  | slice:0:4; let i=index">
                 <div class="card text-white border mb-3">
                     <div class="card-body text-center">
-                        <img src="{{customer.thumbnailUrl}}">
+                        <img src="../../../../assets/images/vodafone-banner.svg" class="mb-4">
                         <p class="card-text">{{customer.title}}</p>
                     </div>
                 </div>
