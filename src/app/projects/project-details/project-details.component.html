@@ -80,7 +80,11 @@
             <p class="project-design-desc">
                 {{m.description}}
             </p>
-            <div  class="test-img1">
+        </div>
+
+
+        <div *ngIf='m.type=="1"'>
+            <div class="test-img1">
                 <img class="screen0" src="../../../assets/images/IPhoneXPart.svg">
                 <drag-scroll class="screen1" [scrollbar-hidden]="hideScrollbar">
                     <img drag-scroll-item [src]="m.image" class="img-fluid" />
@@ -151,7 +155,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-12 col-xs-12">
-                                                <h2 class="project-card-title">{{otherProject.name}} </h2>
+                                                <h2 class="project-card-title">{{otherProject.name | slice:0:20}} <span *ngIf="otherProject.name.length > 20">...</span> </h2>
                                             </div>
                                         </div>
 

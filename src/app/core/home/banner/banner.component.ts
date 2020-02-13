@@ -7,6 +7,9 @@ import {
   transition
 } from '@angular/animations';
 import { HomeService } from 'src/app/shared/services/home.service';
+import { ProjectsService } from 'src/app/shared/services/projects.service';
+import { Router } from '@angular/router';
+import { IProject } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-banner',
@@ -79,15 +82,29 @@ bannerCustomers: any;
 testOne: any;
 testTwo: any;
 testThree: any;
+projects: IProject[];
 
-  constructor(private _homeService: HomeService) { }
+  constructor(private _homeService: HomeService, private dataService: ProjectsService, private router: Router) { }
 
   ngOnInit() {
     this.getBannerCustomers();
     this.getTestOne();
     this.getTestTwo();
     this.getTestThree();
+    
+    this.dataService.getAllProjects()
+    .subscribe((projects: IProject[])=>{
+      this.projects = projects
+      console.log("pro: ",this.projects);
+    });
+    
   }
+  goToDetails(project){
+    console.log(project.id);
+    this.router.navigate(['project', project.id]);
+  }
+
+
 // Animations
   isFocus = false;
   showResults = false;

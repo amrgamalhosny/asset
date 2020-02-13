@@ -14,7 +14,7 @@
             <div [className]="projects.length > 2 ? 'col-12' : 'col-9 hide-arrows'">
                 <p-carousel [value]="projects" [numVisible]="2.5" [numScroll]="1">
                     <ng-template let-project pTemplate="item">
-                        <div  [className]="projects.length >= 2 ? 'col-12 pro' : 'col-7 pro'">
+                        <div [className]="projects.length >= 2 ? 'col-12 pro' : 'col-7 pro'">
                             <div class="card project-card" (click)="goToDetails(project)">
                                 <div class="card-body">
 
@@ -31,14 +31,13 @@
                                         <div>
                                             <!-- ../../../../asset/src/assets/images/175197-1.jpg -->
                                             <!-- ../../../../assets/images/project.png -->
-                                            <img src='../../../../assets/images/project.png ' alt="php"
-                                                class="img-fluid">
+                                            <img src='../../../../assets/images/project.png ' alt="php" class="img-fluid">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-sm-12 col-xs-12">
-                                            <h2 class="project-card-title"> {{project.name}} </h2>
+                                            <h2 class="project-card-title"> {{project.name | slice:0:15}} <span *ngIf="project.name.length > 15">...</span> </h2>
                                         </div>
                                     </div>
 
