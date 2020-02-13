@@ -51,26 +51,35 @@
     <p class="project-design-desc">
         <!-- {{project.uxDesc}} -->
     </p>
+
     <div *ngFor="let m of mockups">
 
         <div *ngIf='m.type=="0"'>
-            <div class="test-img2">
-                <div class="screen2">
-                    <img [src]="m.image" class="img-fluid">
-                </div>
-            </div>
-
-            <p class=" oswaldBold project-design-desc">
+            
+            <p class=" mt-5 oswaldBold project-design-desc">
                 {{m.title}}
             </p>
 
             <p class="project-design-desc">
                 {{m.description}}
             </p>
+            <div class="test-img2">
+                <div class="screen2">
+                    <img [src]="m.image" class="img-fluid">
+                    
+                </div>
+            </div>
         </div>
 
 
         <div *ngIf='m.type=="1"'>
+            <p class=" mt-5 oswaldBold project-design-desc">
+                {{m.title}}
+            </p>
+
+            <p class="project-design-desc">
+                {{m.description}}
+            </p>
             <div  class="test-img1">
                 <img class="screen0" src="../../../assets/images/IPhoneXPart.svg">
                 <drag-scroll class="screen1" [scrollbar-hidden]="hideScrollbar">
@@ -78,16 +87,24 @@
                 </drag-scroll>
 
             </div>
+        </div>
 
-            <p class=" oswaldBold project-design-desc">
+        <div *ngIf='m.type=="2"'>
+            <p class=" mt-5 oswaldBold project-design-desc">
                 {{m.title}}
             </p>
 
             <p class="project-design-desc">
                 {{m.description}}
             </p>
+            <div class="test-img3">
+                <drag-scroll class="screen3" [scrollbar-hidden]="hideScrollbar">
+                    <img drag-scroll-item  src="../../../assets/images/Asset.jpg" class="img-fluid" />
+                </drag-scroll>
+           
         </div>
-
+    
+        </div>
 
     </div>
 
@@ -110,10 +127,10 @@
             </div>
 
             <div class="row latest-projects-body">
-                <div [className]="projects.length>2 ? 'col-12' : 'col-9 hide-arrows'">
+                <div [className]="projects.length > 2 ? 'col-12' : 'col-9 hide-arrows'">
                     <p-carousel [value]="projects" [numVisible]="2.5" [numScroll]="1">
                         <ng-template let-otherProject pTemplate="item">
-                            <div  [className]="projects.length>2 ? 'col-12 pro ' : 'col-7 pro'">
+                            <div  [className]="projects.length >= 2 ? 'col-12 pro' : 'col-7 pro'">
                                 <div class="card project-card" (click)="goToDetails(project)">
                                     <div class="card-body">
 

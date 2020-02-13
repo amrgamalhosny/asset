@@ -22,9 +22,6 @@ import {CalendarModule} from 'primeng/calendar';
     DropdownModule,
     FormsModule,
     CalendarModule
-    
-    
-  
   ],
   exports:[
     AddEditProjectComponent,
