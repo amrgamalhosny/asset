@@ -40,7 +40,7 @@
                 </div>
                 <!-- End Row -->
                 <div class="col-12">
-                    <div class="title" [hidden]="(testTwo | bannerSearch:query).length === 0">
+                    <div class="title" [hidden]="(projects | bannerSearch:query).length === 0">
                         <p>Services</p>
                     </div>
                     <div class="text cursor-pointer" *ngFor="let project of projects  | slice:0:3 | bannerSearch:query; let i=index" (click)="goToDetails(project)">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <!-- End Row -->
-                <div class="title" [hidden]="!((testOne | bannerSearch:query).length === 0 && (testTwo | bannerSearch:query).length === 0 && (testThree | bannerSearch:query).length === 0)">
+                <div class="title" [hidden]="!((testOne | bannerSearch:query).length === 0 && (projects | bannerSearch:query).length === 0 && (testThree | bannerSearch:query).length === 0)">
                     No Data Found.
                 </div>
                 <!-- End Row -->
