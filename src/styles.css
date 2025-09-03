@@ -1,6 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css";
+
+/* CSS Custom Properties for Theme */
+:root {
+  /* Light theme colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-dark: #2c3e50;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-light: #ffffff;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --hero-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --accent-color: #FF1C4C;
+}
+
+/* Dark theme colors */
+body.dark-theme {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-dark: #0f0f0f;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --text-light: #ffffff;
+  --border-color: #404040;
+  --card-bg: #2d2d2d;
+  --shadow: rgba(255, 255, 255, 0.1);
+  --hero-bg: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  --accent-color: #FF1C4C;
+}
+
+/* Light theme (default) */
+body,
+body.light-theme {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body {
     min-height: 1000px;
 }
@@ -17,23 +58,33 @@ body {
 }
 
 .text-grey {
-    color: #717171;
+    color: var(--text-secondary);
 }
 
+/* Theme-aware component styles */
+.card,
+.bg-white {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary);
+}
+
+.border {
+  border-color: var(--border-color) !important;
+}
 
 /* Search Page */
 
 .resultsCont .nav-tabs .nav-link {
-    color: #9F9F9F;
+    color: var(--text-secondary);
     font-size: 18px;
     font-weight: 600;
 }
 
 .resultsCont .nav-tabs .nav-link.active {
-    color: #0F0F0F;
+    color: var(--text-primary);
     background-color: transparent;
     border: none;
-    border-bottom: 3px solid #FF1C4C;
+    border-bottom: 3px solid var(--accent-color);
 }
 
 .resultsCont .nav-link {
@@ -47,7 +98,7 @@ body {
 
 .resultsCont .nav-tabs .nav-link:hover,
 .resultsCont .nav-tabs .nav-link:focus {
-    border-bottom: 3px solid #FF1C4C;
+    border-bottom: 3px solid var(--accent-color);
 }
 
 .resultsCont .nav-tabs .nav-link {
@@ -70,6 +121,7 @@ body {
     font-size: 14px;
     font-weight: 500;
     margin-top: 3px;
+    color: var(--text-primary);
 }
 
 .customCheck {
@@ -83,6 +135,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color: var(--text-primary);
 }
 
 .customCheck input {
@@ -99,8 +152,8 @@ body {
     left: 0;
     height: 18px;
     width: 18px;
-    background-color: #fff;
-    border: solid 1px #707070;
+    background-color: var(--card-bg);
+    border: solid 1px var(--border-color);
 }
 
 
@@ -109,7 +162,7 @@ body {
   } */
 
 .customCheck input:checked~.checkmark {
-    background-color: #E60000;
+    background-color: var(--accent-color);
 }
 
 .checkmark:after {

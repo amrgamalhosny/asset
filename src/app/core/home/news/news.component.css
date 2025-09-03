@@ -1,5 +1,5 @@
 .news-section {
-    background: transparent linear-gradient(0deg, #E4E4EE 0%, #F7F7F8 100%) 0% 0% no-repeat padding-box;
+    background: var(--bg-secondary);
     padding: 5%;
     font-family: OswaldReg;
 }
@@ -10,16 +10,18 @@
 
 .news-title {
     font-family: OswaldBold;
+    color: var(--text-primary);
 }
 
 .latest-title {
     font-family: MyriadReg;
     margin: 0px;
+    color: var(--text-primary);
 }
 
 .news-view-all {
     font-family: OswaldReg;
-    color: #525252;
+    color: var(--text-secondary);
     font-size: 14px;
     margin-top: 3%;
     letter-spacing: 1.4px;
@@ -30,7 +32,7 @@
 
 .news-view-all:after {
     content: '❯';
-    color: #E60000;
+    color: var(--accent-color);
     position: relative;
     left: 0px;
     transition: all .5s ease;
@@ -40,6 +42,7 @@
     cursor: pointer;
     font-family: OswaldBold;
     left: 3px;
+    color: var(--text-primary);
 }
 
 .news-view-all:hover:after {
@@ -60,7 +63,7 @@
     content: '';
     width: 7%;
     height: 5px;
-    background: #FF1C4C;
+    background: var(--accent-color);
     position: absolute;
     bottom: 2%;
     left: 1.5%;
@@ -72,9 +75,11 @@
 }
 
 .news-card {
-    box-shadow: 5px 9px 16px #00000012;
+    background-color: var(--card-bg);
+    box-shadow: 5px 9px 16px var(--shadow);
     border-radius: 6px;
     transition: all .3s ease;
+    border: 1px solid var(--border-color);
 }
 
 .news-card:hover{
@@ -88,14 +93,11 @@
 
 .news-date {
     font-family: MyriadReg;
-}
-
-.news-title {
-    font-family: OswaldBold;
+    color: var(--text-secondary);
 }
 
 .news-card-text {
-    color: #737373;
+    color: var(--text-secondary);
     font-family: OswaldReg;
     margin-top: 6%;
     margin-bottom: 6%;

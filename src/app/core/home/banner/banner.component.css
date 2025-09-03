@@ -5,7 +5,7 @@
     background-size: cover;
     height: 100vh; */
     color:#fff;
-    background-color: #000;
+    background: var(--hero-bg);
     height: 115.5vh;
 }
 .banner video{
@@ -94,7 +94,7 @@
 
 /* Search Results */
 .results{
-    background-color: #fff;
+    background-color: var(--card-bg);
     text-align: left;
     padding: 30px;
     position: absolute;
@@ -105,14 +105,16 @@
     left: 0;
     margin: auto;
     transition: ease .5s;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow);
 }
 .results .title{
-    color: #0F0F0F;
+    color: var(--text-primary);
     font-size: 24px;
     font-weight: 700;
 }
 .results .text{
-    color: #4A4A4A;
+    color: var(--text-secondary);
     font-size: 18px;
     font-weight: 400;
     display: flex;
